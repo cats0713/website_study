@@ -4,7 +4,7 @@
 		<meta charset = "utf-8">
 		<title>study</title>
 		<style>
-
+			h {color: pink;}
 		</style>
 	</head>
 	<body>
@@ -17,12 +17,59 @@
 			//document.write(Math.pow(get_num1 , get_num2) + "<br>");
 			//document.write(Math.sqrt(get_num1 , get_num2) + "<br>");
 			//document.write(Math.floor(get_num1 , get_num2));
-			alert(null == undefined);
-			alert(null == undefined);
-			alert(true == 1);
-			alert(true  === 1);
-			alert(true == '1');
+			//alert(null == undefined);
+			//alert(null == undefined);
+			//alert(true == 1);
+			//alert(true  === 1);
+			//alert(true == '1');
 			//alert(true === '1');
+			var get_number1 = parseInt(prompt(" 숫자를 입력",0));
+			var get_number2 = parseInt(prompt(" 숫자를 입력",0));
+			var get_number3 = parseInt(prompt(" 숫자를 입력",0));
+			
+			if (get_number1 > get_number2) {
+				if(get_number1 > get_number3){
+					if(get_number3 > get_number2){
+						document.write("큰수: \"" + get_number1 + "\"" + "<br>");
+						document.write("중간수: \"" + get_number3 + "\"""<br>");
+						document.write("작은수: \"" + get_number2 + "\"");
+					}	
+					if(get_number3 < get_number2){
+						document.write("큰수: \"" + get_number1 + "\"");
+						document.write("중간수: \"" + get_number2 + "\"");
+						document.write("작은수: \"" + get_number3 + "\"");
+					}
+				}
+			
+				if(get_number1 < get_number3){
+					document.write("큰수: \"" + get_number3 + "\"");
+					document.write("중간수: \"" + get_number1 + "\"");
+					document.write("작은수: \"" + get_number2 + "\"");
+					
+				}
+			}		
+			if (get_number1 < get_number2) {
+				if(get_number1 < get_number3){
+					if(get_number2 > get_number3){
+						document.write("큰수: \"" + get_number2 + "\"" + "<br>");
+						document.write("중간수: \"" + get_number3 + "\"""<br>");
+						document.write("작은수: \"" + get_number1 + "\"");
+						}
+					if(get_number2 < get_number3){
+						document.write("큰수: \"" + get_number3 + "\"");
+						document.write("중간수: \"" + get_number2 + "\"");
+						document.write("작은수: \"" + get_number1 + "\"");
+						}
+					}
+				
+				if(get_number1 > get_number3){
+					document.write("큰수: \"" + get_number2 + "\"");
+					document.write("중간수: \"" + get_number1 + "\"");
+					document.write("작은수: \"" + get_number3 + "\"");
+					
+				}
+			}
+		
 		</script>
 	</body>
 

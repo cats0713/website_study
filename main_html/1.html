@@ -4,7 +4,7 @@
 		<meta charset = "utf-8">
 		<title>study</title>
 		<style>
-			h {color: pink;}
+			h1 {color: pink;}
 		</style>
 	</head>
 	<body>
@@ -26,50 +26,55 @@
 			var get_number1 = parseInt(prompt(" 숫자를 입력",0));
 			var get_number2 = parseInt(prompt(" 숫자를 입력",0));
 			var get_number3 = parseInt(prompt(" 숫자를 입력",0));
-			
+		
+			var max_num;
+			var min_num;
+			var mid_num;
+
 			if (get_number1 > get_number2) {
 				if(get_number1 > get_number3){
 					if(get_number3 > get_number2){
-						document.write("큰수: \"" + get_number1 + "\" ");
-						document.write("중간수: \"" + get_number3 + "\" ");
-						document.write("작은수: \"" + get_number2 + "\" ");
+						max_num = get_number1;
+						mid_num = get_number3;
+						min_num = get_number2;
 					}	
 					if(get_number3 < get_number2){
-						document.write("큰수: \"" + get_number1 + "\" ");
-						document.write("중간수: \"" + get_number2 + "\" ");
-						document.write("작은수: \"" + get_number3 + "\" ");
+						max_num = get_number1;
+						mid_num = get_number2;
+						min_num = get_number3;
 					}
 				}
 			
 				if(get_number1 < get_number3){
-					document.write("큰수: \"" + get_number3 + "\" ");
-					document.write("중간수: \"" + get_number1 + "\" ");
-					document.write("작은수: \"" + get_number2 + "\" ");
-					
+						max_num = get_number3;
+						mid_num = get_number1;
+						min_num = get_number2;
 				}
 			}		
 			if (get_number1 < get_number2) {
 				if(get_number1 < get_number3){
 					if(get_number2 > get_number3){
-						document.write("큰수: \"" + get_number2 + "\" ");
-						document.write("중간수: \"" + get_number3 + "\" ");
-						document.write("작은수: \"" + get_number1 + "\" ");
+						max_num = get_number2;
+						mid_num = get_number3;
+						min_num = get_number1;
 						}
 					if(get_number2 < get_number3){
-						document.write("큰수: \"" + get_number3 + "\" ");
-						document.write("중간수: \"" + get_number2 + "\" ");
-						document.write("작은수: \"" + get_number1 + "\" ");
+						max_num = get_number3;
+						mid_num = get_number2;
+						min_num = get_number1;
 						}
 					}
 				
 				if(get_number1 > get_number3){
-					document.write("큰수: \"" + get_number2 + "\" ");
-					document.write("중간수: \"" + get_number1 + "\" ");
-					document.write("작은수: \"" + get_number3 + "\" ");
-					
+						max_num = get_number2;
+						mid_num = get_number1;
+						min_num = get_number3;
 				}
 			}
-		
+			document.write("큰수: \"" + max_num + "\" ");
+			document.write("중간수: \"" + mid_num + "\" ");	
+			document.write("작은수: \"" + min_num + "\" ");
+					
 		</script>
 	</body>
 

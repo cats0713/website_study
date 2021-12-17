@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset = "uft-8">
+	</head>
+	<body>
+	  <script>
+		let user_input = parseInt(prompt("숫자를 입력하세요"));
+	  	let mul_four = user_input % 4;
+		let mul_eight = user_input % 8;
+
+		if(mul_eight == 0 && mul_four == 0){
+	      document.write("\"" + user_input + "\"은/는 4와 8의 배수가 맞습니다.");
+		} else { 
+	      document.write("\"" + user_input + "\"은/는 4와 8의 배수가  아닙니다.");
+		}
+
+	  </script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset = "uft-8">
+	</head>
+
+	<body>
+	
+	<script>
+	  
+
+	  let user_game = prompt("가위 바위 보!");
+	  let com_game = Math.floor(Math.random()*3);
+
+	  
+		
+	  
+	  if(com_game == 0 ){
+		com_game = '가위';
+		
+		if(user_game == com_game){	  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
+
+		}else if(user_game =='바위'){  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+		
+		}else{
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+		} 
+		
+	  }else if(com_game == 1){
+	  	com_game = '바위';
+	    if(user_game == com_game){	  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
+		
+		}else if(user_game =='보'){  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+		
+		}else{
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+		}  
+	   }else{
+		com_game = '보';
+		if(user_game == com_game){	  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
+		
+		}else if(user_game =='가위'){  
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+		
+		}else{
+		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+		} 
+	   }
+
+	</script>
+	</body>
+
+</html>

@@ -9,15 +9,14 @@
 	<script>
 	  
 
-	  let user_game = prompt("가위 바위 보!");
-	  let com_game = Math.floor(Math.random()*3);
+	 let user_game = prompt("가위 바위 보!");
+	 let com_game = Math.floor(Math.random()*3);
 
-	  
-		
-	  
+	 if(user_game == '가위' ||  user_game == '바위' || user_game == '보') { // 가위바위보를 제대로 기입하지 않을때 예외 처리
+	 
+	 
 	  if(com_game == 0 ){ //컴퓨터의 랜덤 함수가 배출한 값 0을  가위로 변환
-		com_game = '가위';
-		
+		com_game = '가위';		
 		if(user_game == com_game){ // 비긴경우 처리	  
 		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
 
@@ -51,7 +50,7 @@
 		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
 		} 
 	   }
-
+      }else{ alert("가위 바위 보를 올바르게 입력해주십시오");}
 	</script>
 	</body>
 

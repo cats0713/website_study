@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <meta charset = "uft-8">
-	  <style>
-	  	* {padding: 0px; margin: 0px; border: 0px;}
+
+<head>
+	<meta charset="uft-8">
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
 		button {
 			width: 50px;
 			height: 50px;
@@ -12,68 +18,81 @@
 			margin-top: 3px;
 			margin-left: 10px;
 			color: white;
-			background-color: green;
+			background-color: #f48fb1;
 			border-radius: 3px;
 		}
-		button:hover{
-			background-color: pink;
+
+		button:hover {
+			background-color: #bf5f82;
+		}
+	</style>
+</head>
+
+<body>
+	<button onclick="button_gawi('가위');">✌️</button>
+	<button onclick="button_mok('바위');">✊</button>
+	<button onclick="button_bow('보');">🖐</button>
+
+	<script>
+
+
+		//let user_game = prompt("가위 바위 보!");
+		let com_game = Math.floor(Math.random() * 3);
+		
+		function vs_com(user_game) {
+			if (com_game == 0) { //컴퓨터의 랜덤 함수가 배출한 값 0을  가위로 변환
+				com_game = '가위';
+				if (user_game == com_game) { // 비긴경우 처리	  
+					document.write(`비김!!!`);
+
+				} else if (user_game == '바위') {  // 컴퓨터가 가위고 사용자가 바위인 경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+
+				} else { // 컴퓨터가 가위고 사용자가 보인경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+				}
+
+			} else if (com_game == 1) { //컴퓨터가 바위 인 경우
+				com_game = '바위';
+				if (user_game == com_game) {	  // 비긴경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
+
+				} else if (user_game == '보') {  // 컴퓨터가 바위고 사용자가 보인경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+
+				} else { // 컴퓨터가 바위고 사용자가 가위인경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+				}
+			} else { // 컴퓨터가 보 인경우
+				com_game = '보';
+				if (user_game == com_game) { // 비긴경우 처리 
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
+
+				} else if (user_game == '가위') {  // 컴퓨터가 보고 사용자가 가위 인경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
+
+				} else { // 컴퓨터가 보고 사용자가 바위인경우 처리
+					document.write("나: \"" + user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
+				}
+			}
 		}
 
-	  </style>
-	</head>
+		function button_gawi(user_game) {
+		 vs_com(user_game);
+		}
+		// if(user_game == '가위' ||  user_game == '바위' || user_game == '보') {} // 가위바위보를 제대로 기입하지 않을때 예외 처리
 
-	<body>
-	<button id = '가위'>✌️</button>
-	<button id = '바위'>✊</button>
-	<button id = '보'>🖐</button>
-	
+		function button_mok(user_game) {
+		  vs_com(user_game);
+		}
 
-	<!--<script>
-	  
+		function button_bow(user_game) {
+		  vs_com(user_game);
+		}
 
-	 let user_game = prompt("가위 바위 보!");
-	 let com_game = Math.floor(Math.random()*3);
 
-	 if(user_game == '가위' ||  user_game == '바위' || user_game == '보') { // 가위바위보를 제대로 기입하지 않을때 예외 처리
-	 
-	 
-	  if(com_game == 0 ){ //컴퓨터의 랜덤 함수가 배출한 값 0을  가위로 변환
-		com_game = '가위';		
-		if(user_game == com_game){ // 비긴경우 처리	  
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
-
-		}else if(user_game =='바위'){  // 컴퓨터가 가위고 사용자가 바위인 경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
-		
-		}else{ // 컴퓨터가 가위고 사용자가 보인경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
-		} 
-		
-	  }else if(com_game == 1){ //컴퓨터가 바위 인 경우
-	  	com_game = '바위';
-	    if(user_game == com_game){	  // 비긴경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
-		
-		}else if(user_game =='보'){  // 컴퓨터가 바위고 사용자가 보인경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
-		
-		}else{ // 컴퓨터가 바위고 사용자가 가위인경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
-		}  
-	  }else{ // 컴퓨터가 보 인경우
-		com_game = '보'; 
-		if(user_game == com_game){ // 비긴경우 처리 
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 비김!!!");
-		
-		}else if(user_game =='가위'){  // 컴퓨터가 보고 사용자가 가위 인경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 이김!!!");
-		
-		}else{ // 컴퓨터가 보고 사용자가 바위인경우 처리
-		  document.write("나: \""+ user_game + "\" / 컴퓨터: \"" + com_game + "\" / 패배!!!");
-		} 
-	   }
-      }else{ alert("가위 바위 보를 올바르게 입력해주십시오");}
-	</script> -->
-	</body>
+       // }else{ alert("가위 바위 보를 올바르게 입력해주십시오");}
+	</script>
+</body>
 
 </html>

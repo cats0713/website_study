@@ -7,20 +7,19 @@
   <body>
 
   <script>
-	let my_num1 = parseInt(prompt());
-	let my_num2 = parseInt(prompt());
-	let max_num; //두가지의 숫자를 받아 비교하여 큰수의 *을 찍는 프로그램
-	//document.write(--i); //선감소
-	//document.write(i--); //후감소
-	//document.write(i++); //후증가
-	//document.write(++i); //선증가
-	
-	max_num = my_num1 > my_num2 ? max_num = my_num1 : max_num = my_num2 ; //삼항 연산자
-	for (let i=0; i<max_num; i++){
-	  for (let j=0; j <max_num; j++) {
-	    document.write("*");
-	  }
-	  document.write("<br>");
+  	//  숫자를 입력 받아 숫자만큼
+	//  단, 홀수에는 하트
+	// 짝수에는 이모티콘을 사용
+
+	let my_num = parseInt(prompt());
+	let imo_user;
+	let hol_su;
+
+	for (let i=0; i<my_num; i++){
+	  hol_su = i % 2;
+	  imo_user = (hol_su == 0) ? "😍" :"😋";
+	  document.write(imo_user);
+
 	}
 
 

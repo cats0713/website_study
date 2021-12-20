@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset ="uft-8">
+  </head>
+  <body>
+    <script>
+	  let user_num = parseInt(prompt("숫자를 입력하시오"));
+	  let u_star = '';
+	  let u_len = 0;
+	  let u_total = user_num * (user_num + 1) / 2;
+	  let i_cont;
+	  let j = 0 ;
+	  // document.write(u_total);	
+	  
+	  for (let i = 0; i < u_total; i++) {
+		//j++;
+		//i_cont = j  * ( j + 1 ) / 2;
+		
+
+		document.write('*');
+		u_star = u_star + '*';
+	    u_len = u_star.length;
+	    document.write(u_len);	
+		if (u_len > i){
+		  	
+		  u_star = '';
+		  document.write("<br>");
+		}
+
+		
+		
+	  }
+
+
+
+
+	</script>
+  </body>
+
+</html>

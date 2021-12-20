@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+	<meta charset = 'utf-8'>
+  	<title>test</title>
+  <body>
+
+  <script>
+	let my_num1 = parseInt(prompt());
+	let my_num2 = parseInt(prompt());
+	let max_num; //두가지의 숫자를 받아 비교하여 큰수의 *을 찍는 프로그램
+	//document.write(--i); //선감소
+	//document.write(i--); //후감소
+	//document.write(i++); //후증가
+	//document.write(++i); //선증가
+	
+	max_num = my_num1 > my_num2 ? max_num = my_num1 : max_num = my_num2 ; //삼항 연산자
+	for (let i=0; i<max_num; i++){
+	  for (let j=0; j <max_num; j++) {
+	    document.write("*");
+	  }
+	  document.write("<br>");
+	}
+
+
+  </script>
+  </body>
+</html>

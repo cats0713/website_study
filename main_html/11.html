@@ -5,31 +5,22 @@
   </head>
   <body>
     <script>
+	 // for문을 한번만 사용하여 별의 개수 찍기
 	  let user_num = parseInt(prompt("숫자를 입력하시오"));
-	  let u_star = '';
-	  let u_len = 0;
-	  let u_total = user_num * (user_num + 1) / 2;
-	  let i_cont;
-	  let j = 0 ;
-	  // document.write(u_total);	
+	  let u_star = ''; //별의 자리 카운팅
+	  let u_len = 0; //별의 자리수
+	  let u_total = user_num * (user_num + 1) / 2; //별을 찍는 총 개수
+	  let j = 1; //별의 증가 개수
 	  
 	  for (let i = 0; i < u_total; i++) {
-		//j++;
-		//i_cont = j  * ( j + 1 ) / 2;
-		
-
-		document.write('*');
-		u_star = u_star + '*';
-	    u_len = u_star.length;
-	    document.write(u_len);	
-		if (u_len > i){
-		  	
+		document.write('*'); //별찍기
+	    u_star = u_star + '*'; //별 찍은 자리수
+		u_len = u_star.length;
+		if (u_len == j){ //증가개수와 별의 자리수 비교 
 		  u_star = '';
+		  j++;
 		  document.write("<br>");
 		}
-
-		
-		
 	  }
 
 

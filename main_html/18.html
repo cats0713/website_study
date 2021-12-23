@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+ 	  * {margin: 0; padding: 0;}
+
+	  .sam_sck {
+		position:absolute;
+		right: 10px;
+	
+	  }
+
+	  .sam_sck:hover {
+	  	border: 1px solid red;
+		position:absolute;
+		right: 10px;
+	
+	  }
+
+	</style>
+  </head>
+  <body>
+	
+	<img class ="sam_sck" src ="http://file3.instiz.net/data/file3/2020/10/17/9/9/0/990103145b5c2abab94e07a18e7a55ea.jpg" alt ="삼색이 눈 맞는 사진">
+
+
+	<script>
+	  let user_input = parseInt(prompt("숫자를 입력하세요",0));
+	  let i = 0;
+	  let j = 0;
+	  while(i < user_input){
+		while(j <= i){
+		  document.write("*");
+		  j++;
+		}
+		document.write("<br>");
+		i++;
+		j = 0;
+	  }
+	</script>
+  </body>
+</html>

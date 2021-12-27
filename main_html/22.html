@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+	<script>
+	  (function main(){ //메인함수를 명시한다  why? 전역변수가 생기지 않고 모듈화 하기위해
+	 	 
+		 function sum_num(inA, inB){
+	       let tempV = inA +inB;
+		   return tempV;
+		 }
+		 let input_A = parseInt(prompt('num A'));
+		 let input_B = parseInt(prompt('num B'));
+		 let to_tn = sum_num(input_A, input_B);
+		
+		 console.log(to_tn);
+	  })();
+
+
+	</script>
+  </body>
+</html>

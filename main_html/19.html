@@ -14,19 +14,19 @@
 	<script> //while 구문 연습
 	let user_x = parseInt(prompt("X"));
 	let user_y = parseInt(prompt("Y"));
-	let i = 0;
-	let j = 0;
-	const REPIT = 10;
-	
-	while (i < user_y){
-	  while (j < user_x){
-		document.write("*");
-	    j++;
-	  }j = 0;
-	  document.write("<br>");
-	  i++;
+	{ //묶어버리기 지역변수로 만들기
+	  let i = j = 0; // 같은값이면 이렇게 적어도됨
+	  const REPIT = 10;
+	  while (i < user_y){
+	    while (j < user_x){	
+		  document.write("*");
+	      j++;
+	    }
+	    j = 0;
+	    document.write("<br>");
+	    i++;
+	  }
 	}
-
 	</script>
   </body>
 </html>

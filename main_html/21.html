@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+	<script>
+	  let i=j = 0;
+	  
+
+	  document.write(".");
+	  while (i < 10){
+		document.write(i);
+		i++;
+	  }i=0;
+	  document.write("<br>");
+
+	  while(i < 10) {
+	  	document.write(i);
+		while(j < 10){
+		  if(i == 0 || j == 0 || i == 9 || j == 9 || i+j == 9 || i == j){
+		  document.write("*");
+		  }else{ 
+		  document.write("-");
+		  }
+		  j++;
+		}j = 0;
+	  document.write("<br>");
+	  i++;
+	  }
+
+	</script>
+  </body>
+</html>

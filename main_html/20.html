@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+  </head>
+  <body>
+	<script>
+	  let user_num = parseInt(prompt("No?"));
+
+	 let i=j= 0;
+
+	 while(i < user_num) {
+	   while(j < user_num){
+	     if (i == 0 || i == user_num-1 || j == 0 || j == user_num-1){
+		 document.write("*");	
+
+		 }else {document.write("-");
+			//첫째와 마지막을 빼고 가운데에는 -을 넣어
+	     }
+		 j++;	
+	   }j = 0;
+	   document.write("<br>");
+	   i++;
+	 }
+	 
+
+	 
+	</script>
+  </body>
+</html>

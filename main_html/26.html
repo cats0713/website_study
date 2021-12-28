@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    (function main() {
+      const inputUser = prompt('문자를 입력해주세요'); //문자를 입력받는다.
+      let i = 0; //반복문 실행 변수
+      let userShift; //첫번째 자리 비교
+      let userPop; //마지막 자리 비교
+      const userInput = []; //입력받은 문자를 배열에 담기위한 변수 선언
+      let userTrue = 0; //모든 자리가 맞는지 확인하는 변수
+
+      while (i < inputUser.length) { //문자를 배열에 담는 과정
+        userInput[i] = inputUser[i];
+        i++;
+      }
+      //document.write(userInput); 
+      i = 0; // i 활용을 위한 초기화
+
+      while (i < Math.floor(inputUser.length / 2)) { 
+        //배열의 크기를 반으로 나누어 비교 
+        userShift = userInput.shift();
+        userPop = userInput.pop();
+
+        if (userShift == userPop) { //첫번째와 마지막이 같은지 비교
+          //document.write( i+ '번째 맞습니다.'+'<br>');
+          userTrue += 1;
+        } else {
+          userTrue += 0;
+        }
+        i++;
+      }
+
+      //document.write(userTrue);
+      if (userTrue == Math.floor(inputUser.length / 2)) {
+        //모든 자리가 맞는지 확인
+        document.write("맞습니다");
+      } else {
+        document.write('틀립니다.');
+      }
+    })();
+  
+  </script>
+</body>
+</html>

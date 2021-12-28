@@ -42,12 +42,10 @@
           //document.write(userTrue);
           i++;
         }
-        if (userTrue == Math.floor(inputUser.length / 2)) {
-          //모든 자리가 맞는지 확인
-          document.write("맞습니다");
-        } else {
-          document.write('틀립니다.');
-        }
+          
+        let resultUser = (userTrue == Math.floor(inputUser.length / 2)) ? "맞습니다." : "틀립니다."
+        //모든 자리가 맞는지 확인
+          document.write(resultUser);
       }
 
 

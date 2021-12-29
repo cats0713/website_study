@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    (function main(){ //swapping 작업
+      let userA = prompt();
+      let userB = prompt();
+      let userC = 0; //<= 숫자 (초기값을 설정할때 문자를 받을지 숫자를 받을지  설정해주기)
+      
+      console.log("A " + userA);
+      console.log("B " + userB);
+
+      userC = userA;
+      userA = userB;
+      userB = userC;
+
+      console.log("A " + userA);
+      console.log("B " + userB);
+
+    })();
+  </script>
+</body>
+</html>

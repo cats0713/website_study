@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    (function main() {
+      let inArr = [13, 23, 33, 12, 15];
+      let inCom = 0;
+      let i = 0;
+      let j = 0;
+
+      //Ascending Sort-오름 <> Descending Sort-내림
+      while (i < inArr.length) {
+        while (j < inArr.length - 1 ) {
+          if (inArr[j] > inArr[j + 1]) {
+            inCom = inArr[j];
+            inArr[j] = inArr[j+1];
+            inArr[j+1] = inCom;
+            console.log("실행");
+          }
+          j++;
+        }
+        i++; 
+      }
+      console.log(inArr);
+
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    * {margin: 0; padding: 0;}
+    .userBox {
+      width: 120px;
+      height: 70px;
+      background-color: pink;
+      line-height: 70px;
+      font-size: 30px;
+      text-align: center;
+      border-radius: 5px;
+
+    }
+    .userA, .userB {
+      width: 50px;
+      height: 20px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .userB{
+      margin-left: 10px;
+    }
+    .userButton {
+     display: block;
+      width: 120px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: lightgray;
+    }
+    .userButton:hover {
+      background-color: gray;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="userBox" class="userBox">답</div>
+  <input id="userA" class="userA" type="text" value="">
+  <input id="userB" class="userB" type="text" value="">
+  <button id="userButton" class="userButton">정답확인</button>
+  
+  <script>
+    let userBox = document.getElementById("userBox");
+    let userButton = document.getElementById("userButton");
+
+    userButton.onclick = function(){
+      let userA = document.getElementById("userA").value;
+      let userB = document.getElementById("userB").value;
+
+      userBox.innerHTML = Number(userA) + Number(userB);
+    }
+  
+  </script>
+</body>
+</html>

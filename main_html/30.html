@@ -7,16 +7,66 @@
   <title>Document</title>
   <style>
     * { margin: 0; padding: 0; }
-    .box { background-color: pink;
+    .box { 
+      background-color: pink;
+      font-size: 30px;
+      width: 150px;
+      height: 70px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 75px;
+    }
+    .colorButton, .textButton{
+      display: block;
+      width: 100px;
+      height: 40px;
+      color: red;
+      border-radius: 4px;
+      margin-top: 10px;
 
     }
+    .colorButton:hover, .textButton:hover{
+      color: blue;
+      cursor: pointer; /*   커서로 바뀜   */
+    }
+    .colorText, .contenText, .textSize{
+      width: 100px;
+      height: 20px;
+      margin-top: 10px;
+    }
+    .colorText:focus, .contenText:focus { /* input요소를 클릭 했을때 */
+      background-color: lightgray;
+    }
+
   </style>
 </head>
 <body>
-  <div id = "box" class="box">box</div>
+  <div id="box" class="box">box</div>
+  <input id='colorText' class='colorText' type="text" value=""> <!-- text box 요소 -->
+  <button id="colorButton" class="colorButton">색변경</button>
+  <input id='contenText' class="contenText" type="text" value="">
+  <button id="textButton" class="textButton">글자변경</button>
+  <input id="textSize" class="textSize" type="number" min="5" max="45" value="30">
+  
+
   <script>
     let box = document.getElementById("box");
-    box.style.color = "white"
+    let button = document.getElementById("colorButton");
+    let textButton = document.getElementById("textButton");
+    let textSize = document.getElementById("textSize"); //value를 가져온다
+
+    colorButton.onclick = function(){
+      let colorText = document.getElementById("colorText").value; //value를 가져온다
+      box.style.color = colorText;
+    }
+    textButton.onclick = function(){
+      let contenText = document.getElementById("contenText").value; //value를 가져온다
+      box.innerHTML = contenText; //안에 있는 컨탠츠를 바꾼다.
+    }
+    textSize.onchange = function(){ //내용이 바뀌면 실행
+      box.style.fontSize = textSize.value + 'px'; //-는 카멜표기로 행꾼다. 
+    }  
+  
   </script>
 </body>
 </html>

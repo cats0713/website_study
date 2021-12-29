@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bbigBOX {
+      width: 340px;
+      height: 160px;
+    }
+
+    .bigBox {
+      margin-top: 10px;
+      margin-left: 10px;
+      float: left;
+      width: 100px;
+      height: 140px;
+    }
+
+    .bigBox2 {
+      display: none;
+    }
+    .bigBox3 {
+      display: none;
+    }
+
+    .userNumber {
+      font-size: 30px;
+      width: 100px;
+      height: 100px;
+      border: 0;
+      outline: 0;
+      color: white;
+      background-color: pink;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .printMassage {
+      width: 100px;
+      height: 40px;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      background-color: skyblue;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      cursor: pointer;
+    }
+
+    .printMassage:hover {
+      color: gray;
+    }
+
+    .printMassage3:hover {
+      color: white;
+      cursor: default;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bbigBOX">
+    <div id="bigBox1" class="bigBox">
+      <input id="userNumber1" class="userNumber userNumber1" type="text" value="0">
+      <div id="printMassage1" class="printMassage printMassage1">+</div>
+    </div>
+
+    <div id="bigBox2" class="bigBox bigBox2">
+      <input id="userNumber2" class="userNumber userNumber2" type="text" value="0">
+      <div id="printMassage2" class="printMassage printMassage2">=</div>
+    </div>
+
+    <div id="bigBox3" class="bigBox bigBox3">
+      <input id="userNumber3" class="userNumber userNumber3" type="text" value="0">
+      <div id="printMassage3" class="printMassage printMassage3">Total</div>
+    </div>
+  </div>
+  <script>
+
+    let printMassage1 = document.getElementById("printMassage1");
+    let printMassage2 = document.getElementById("printMassage2");
+    let bigBox2 = document.getElementById("bigBox2");
+    let bigBox3 = document.getElementById("bigBox3");
+    let userNumber1 =document.getElementById("userNumber1");
+    let userNumber2 =document.getElementById("userNumber2"); 
+    let userNumber3 =document.getElementById("userNumber3");
+
+    printMassage1.onclick = function () {
+      bigBox2.style.display = "block";
+    }
+    printMassage2.onclick = function () {
+      bigBox3.style.display = "block";
+      userNumber3.value = Number(userNumber1.value) + Number(userNumber2.value);
+    }
+  </script>
+</body>
+
+</html>

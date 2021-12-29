@@ -81,36 +81,44 @@
     let textBox = document.getElementById("textBox");
 
     uButton.onclick = function () {
-      let userData = Number(userInput.value);
-      let comData = [];
-      let procesData = [];
-      let userProcesData = "";
+      let userData = Number(userInput.value); //유저의 값을 참조 -> 숫자로 바꿈 0을 거르기위해
+      let comData = []; //카운트 하는 배열을 생성;
+      let procesData = []; // 콤마 찍는 배해
+      let userProcesData = ""; // 결과
       let i = 0;
 
-      userData = String(userData);
-      //console.log(userData);
-      let userCont = userData.length - 1;
-      while (i < userData.length) {
-        
-        comData.unshift(userData[userCont]);
-        procesData.unshift(userData[userCont]);
-        if (comData.length % 3 == 0) {
+      userData = String(userData); //다시 데이터타입을 스트링으로 바꿈
+      let userCont = userData.length - 1 //배열을 거꾸로 넣기 위한 카운터
+
+      while (i < userData.length) { //입력받은 수의 자리수 만큼 반복
+        comData.unshift(userData[userCont]); //콤마를 넣을 자리를 위한 배열(unshift를 사용하기위해)
+        procesData.unshift(userData[userCont]); //열마를 넣은 배열
+
+        if (comData.length % 3 == 0) { //자리수가 3임을 카운트 하고 콤마를 넣는 작업 
           procesData.unshift(",");
         }
+        userCont--; //배열을 거꾸로 넣기위한 자리수 감소
+        i++; //반복문
 
-        userCont -= 1;
-        i++;
-      }
-      if (procesData[0] == ',' ||  procesData[0] == '-') {
-        procesData.shift();
       }
 
-      i = 0;
-      while (i < procesData.length) {
+      if (procesData[0] == ',' || procesData[0] == '-') { //,와 - 예외 처리
+        if(procesData[1] == ','){ 
+          procesData.splice(1,1); // - 예외처리
+        }else if(procesData[2] == ','){
+          //예외 걸러주기
+        }else{
+          procesData.shift(); //콤마지우기
+        }
+        
+      }
+
+      i = 0; //i 활용을 위한 초기화
+      while (i < procesData.length) { //배열을 문자열로 바꾸는 작업
         userProcesData = userProcesData + procesData[i];
         i++;
       }
-      textBox.innerHTML = userProcesData;
+      textBox.innerHTML = userProcesData;//출력
     }
 
 

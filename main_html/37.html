@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .printColor{
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border: 10px solid pink;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="printColor" class="printColor"></div>
+  R<input id="userRed" type="range" min="0" max="255" value="0"><br>
+  G<input id="userGreen" type="range" min="0" max="255" value="0"><br>
+  B<input id="userBlue" type="range" min="0" max="255" value="0"><br>
+  
+  <script>
+    let userRed = document.getElementById("userRed");
+    let userGreen = document.getElementById("userGreen");
+    let userBlue = document.getElementById("userBlue");
+    let printColor = document.getElementById("printColor");
+
+    userRed.onchange = function (){
+      //rgb(r,g,b);
+      //console.log("red");
+      printColor.style.backgroundColor = ` rgb(${userRed.value}, ${userGreen.value}, ${userBlue.value})`;
+      //console.log (` rgb(${userRed.value}, ${userGreen.value}, ${userBlue.value})`);
+    }
+    userGreen.onchange = function (){
+      printColor.style.backgroundColor = ` rgb(${userRed.value}, ${userGreen.value}, ${userBlue.value})`;
+    }
+    userBlue.onchange = function (){
+      printColor.style.backgroundColor = ` rgb(${userRed.value}, ${userGreen.value}, ${userBlue.value})`;
+    }
+  
+  
+  </script>
+</body>
+</html>

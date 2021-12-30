@@ -27,15 +27,16 @@
 
   <script> //랜덤하게 별 화면에 뿌리기
     let userStar = document.getElementById("userStar");
+    let starStamp = ['&#11088','&#127775','&#10024','&#127873','&#127881	'];
     let i = 0;
     while (i < 500) {
       let locX = Math.floor(Math.random() * (window.innerHeight-70)) + 1;
       let locY = Math.floor(Math.random() * (window.innerWidth-70)) + 1;
       let starSize = Math.floor(Math.random() * 46) + 5;
+      let starChoice = Math.floor(Math.random()* 5);
     
       let starShape = `<div id="userStar" class="userStar" style="position: absolute; top: ${locX}px; left: ${locY}px;
-    font-size: ${starSize}px; width: 50px; height: 50px;">⭐️</div>`
-
+    font-size: ${starSize}px; width: 50px; height: 50px;">${starStamp[starChoice]}</div>`
       userStarShape.innerHTML += starShape;
       i++;
     }

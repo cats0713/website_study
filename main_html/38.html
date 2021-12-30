@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="userStarShape" class="userStarShape"></div>
+
+
+  <script> //랜덤하게 별 화면에 뿌리기
+    let userStar = document.getElementById("userStar");
+    let i = 0;
+    while (i < 500) {
+      let locX = Math.floor(Math.random() * (window.innerHeight-70)) + 1;
+      let locY = Math.floor(Math.random() * (window.innerWidth-70)) + 1;
+      let starSize = Math.floor(Math.random() * 46) + 5;
+    
+      let starShape = `<div id="userStar" class="userStar" style="position: absolute; top: ${locX}px; left: ${locY}px;
+    font-size: ${starSize}px; width: 50px; height: 50px;">⭐️</div>`
+
+      userStarShape.innerHTML += starShape;
+      i++;
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

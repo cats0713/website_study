@@ -1,0 +1,87 @@
+<!dcoptye html>
+  <html lang="ko">
+
+  <head>
+    <meta charset="utf=8">
+    <title>BaekHyun - Candy</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .videoBox {
+        width: 1366px;
+        height: 898px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -449px;
+        margin-left: -683px;
+      }
+
+      .baekVideo {
+        display: block;
+        width: 1366px;
+        height: 768px;
+        border-radius: 30px;
+      }
+
+      .controlMenu {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 300px;
+        height: 100px;
+        border: 10px solid black;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .playBaek,
+      .pauseBaek,
+      .stopBaek {
+        display: inline-block;
+        float: left;
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+        margin-top: 17px;
+      }
+
+      .playBaek:hover,
+      .pauseBaek:hover,
+      .stopBaek:hover {
+        cursor: pointer;
+        color: tomato;
+      }      
+
+    </style>
+  </head>
+
+  <body>
+    <div class="videoBox">
+      <video id="baekVideo" class="baekVideo" src="./video/BAEKHYUNCandy.mp4" controls></video>
+      <div class="controlMenu">
+        <i id="playBaek" class="xi-play-circle-o playBaek"></i>
+        <i id="pauseBaek" class="xi-pause-circle-o pauseBaek"></i>
+        <i id="stopBaek" class="xi-recording-stop stopBaek"></i>
+      </div>
+
+      <script>
+        let baekVideo = document.getElementById("baekVideo");
+        let playBaek = document.getElementById("playBaek");
+        let pauseBaek = document.getElementById("pausebBek");
+        let stopBaek = document.getElementById("stopBaek");
+
+        playBaek.onclick = function () { baekVideo.paly(); }
+        pauseBaek.onclick = function () { baekVideo.pause(); }
+        stopBaek.onclick = function () {
+          baekVideo.currentTime = 0;
+          baekVideo.pause();
+        }
+      </script>
+  </body>
+
+  </html>

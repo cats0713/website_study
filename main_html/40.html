@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .videoBox {
+      width: 1366px;
+      height: 898px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -449px;
+      margin-left: -683px;
+    }
+
+    .userVideo {
+      display: block;
+      width: 1366px;
+      height: 768px;
+      border-radius: 30px;
+    }
+
+    .controlMeun {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 400px;
+      height: 100px;
+      border: 10px solid orange;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .videoButton {
+      display: inline-block;
+      text-align: center;
+      margin-top: 15px;
+      float: left;
+      width: 100px;
+      height: 100px;
+      font-size: 70px;
+    }
+
+    .videoButton:hover {
+      cursor: pointer;
+      color: gray;
+    }
+    .scrollVideo{
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 400px;
+      height: 100px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="shortcut icon" href="shooting-star.ico">
+</head>
+
+<body>
+  <div class="videoBox">
+    <video src="./user.MOV" id="userVideo" class="userVideo"></video>
+    <input id="scrollVideo" class="scrollVideo" type="range" value="0" min="0" max="12">
+    <div class="controlMeun">
+      <i id="playVideo" class="xi-play-circle-o playVideo videoButton"></i>
+      <i id="pauseVideo" class="xi-pause-circle-o pauseVideo videoButton"></i>
+      <i id="stopVideo" class="xi-recording-stop stopVideo videoButton"></i>
+      <i id="fullVideo" class="xi-focus-frame fullVideo videoButton"></i> 
+    </div>
+  </div>
+  <script>
+    let userVideo = document.getElementById("userVideo");
+    let playVideo = document.getElementById("playVideo");
+    let pauseVideo = document.getElementById("pauseVideo");
+    let stopVideo = document.getElementById("stopVideo");
+    let fullVideo = document.getElementById("fullVideo");
+    let scrollVideo =document.getElementById("scrollVideo");
+    let i = 0;
+
+    playVideo.onclick = function () {
+      console.log("play");
+      userVideo.play();
+    }
+
+    pauseVideo.onclick = function () {
+      userVideo.pause();
+    }
+
+    stopVideo.onclick = function () {
+      userVideo.currentTime = 0;
+      userVideo.pause();
+    }
+    fullVideo.onclick = function () {
+      if(i == 0){
+        userVideo.style.width = 1366 + "px"
+        userVideo.style.height = 768 + "px" 
+        i = 1;
+      }else{
+        userVideo.style.width = 700 + "px"
+        userVideo.style.height = 300 + "px" 
+        i = 0;
+      }
+    }
+
+    scrollVideo.onchange = function(){
+      userVideo.currentTime = scrollVideo.value;
+    }
+
+  </script>
+
+</body>
+
+</html>

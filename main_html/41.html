@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset> <!--묶어주는거 -->
+      <legend>이름</legend> <!--묶어주는 네이밍 -->
+        <input type="radio" name="gender" value="male" checked>male
+        <input type="radio" name="gender" value="female" >Female
+        <input type="radio" name="gender" value="other" >Other
+        <input type="submit" name="gender">
+    </fieldset>
+  </form>
+  <select name="selectUser">
+    <option value="vovo">vovo</option>
+    <option value="lolo">lolo</option>
+  </select>
+  <textarea name="userText" id="userText" cols="30" rows="10"></textarea>
+  
+  <form action="ad.html">
+    <input list="browsers">
+    <input list="browsers2">
+    <datalist id="browsers">
+      <option value="inter"></option>
+      <option value="inter"></option>
+      <option value="inter"></option>
+      <option value="inter"></option>
+    </datalist>
+    <datalist id="browsers2">
+      <option value="i"></option>
+      <option value="edge"></option>
+      <option value="edge"></option>
+      <option value="ieenter"></option>
+    </datalist>
+  </form>
+
+  <form action="asd.html">
+    <input type="number">
+    <input type="checkbox" name="userValue" value="bike"> bike
+    <input type="checkbox" name="userValue" value="car"> car
+    birthday:
+    <input type="date" max="2020-01-02" min="2019-01-02">
+    <input type="password">
+    <input type="month">
+    <input type="week">
+    <input type="time">
+    <input type="datetime">
+    <input type="datetime-local">
+    <input type="color">
+  </form>
+
+
+</body>
+</html>

@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <mata charset="utf-8">
 
-	</head>
-	
-	<body>
-	
-	  <script>
-	    let num1 = parseInt(prompt("input number1"));
-	    let num2 = parseInt(prompt("input number2"));
-	    let num3 = parseInt(prompt("input number3"));
-	    
+<head>
+	<mata charset="utf-8">
+
+</head>
+
+<body>
+
+	<script>
+		let num1 = parseInt(prompt("input number1"));
+		let num2 = parseInt(prompt("input number2"));
+		let num3 = parseInt(prompt("input number3"));
+
 		let max_num;
 		let mid_num;
 		let min_num;
 
-		if(num1 > num2){
-			if(num1 > num3){
-				if(num3 >num2){
+		if (num1 > num2) {
+			if (num1 > num3) {
+				if (num3 > num2) {
 					max_num = num1;
 					mid_num = num3;
 					min_num = num2;
-				}else {
-				max_num = num1;
-				mid_num = num2;
-				min_num = num3;
-				}	
-			}else{
+				} else {
+					max_num = num1;
+					mid_num = num2;
+					min_num = num3;
+				}
+			} else {
 				max_num = num3;
 				mid_num = num1;
 				min_num = num2;
-			}	
-		}else {
-			if(num1 < num3){
-				if(num2 > num3){
+			}
+		} else {
+			if (num1 < num3) {
+				if (num2 > num3) {
 					max_num = num2;
 					mid_num = num3;
-					min_num = num1;	
-				}else{
+					min_num = num1;
+				} else {
 					max_num = num3;
 					mid_num = num2;
-					min_num = num1;	
-				 }
-			}else{
+					min_num = num1;
+				}
+			} else {
 				max_num = num2;
 				mid_num = num1;
-				min_num = num3;		
+				min_num = num3;
 			}
-		}	
-		document.write("max_num : " + max_num  + " mid_num : " + mid_num  + " min_num : " + min_num);
+		}
+		document.write("max_num : " + max_num + " mid_num : " + mid_num + " min_num : " + min_num);
 
-	  </script>
-	</body>
+	</script>
+</body>
+
 </html>

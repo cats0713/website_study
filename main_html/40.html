@@ -75,7 +75,7 @@
       <i id="playVideo" class="xi-play-circle-o playVideo videoButton"></i>
       <i id="pauseVideo" class="xi-pause-circle-o pauseVideo videoButton"></i>
       <i id="stopVideo" class="xi-recording-stop stopVideo videoButton"></i>
-      <i id="fullVideo" class="xi-focus-frame fullVideo videoButton"></i> 
+      <i id="fullVideo" class="xi-switch-on fullVideo videoButton"></i> 
     </div>
   </div>
   <script>
@@ -102,6 +102,7 @@
     }
     fullVideo.onclick = function () {
       if(i == 0){
+        fullVideo.classList.replace = "xi-switch-off"
         userVideo.style.width = 1366 + "px"
         userVideo.style.height = 768 + "px" 
         i = 1;

@@ -62,6 +62,9 @@
       height: 100px;
       text-align: center;
     }
+    .scrollVideo{
+      font-size: 20px;
+    }
   </style>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="shortcut icon" href="shooting-star.ico">
@@ -71,6 +74,7 @@
   <div class="videoBox">
     <video src="./user.MOV" id="userVideo" class="userVideo"></video>
     <input id="scrollVideo" class="scrollVideo" type="range" value="0" min="0" max="12">
+    <div id="scrollVideoValue" class="scrollVideo scrollVideoValue">현재 타임라인 : 00</div>
     <div class="controlMeun">
       <i id="playVideo" class="xi-play-circle-o playVideo videoButton"></i>
       <i id="pauseVideo" class="xi-pause-circle-o pauseVideo videoButton"></i>
@@ -85,6 +89,7 @@
     let stopVideo = document.getElementById("stopVideo");
     let fullVideo = document.getElementById("fullVideo");
     let scrollVideo =document.getElementById("scrollVideo");
+    let scrollVideoValue =document.getElementById("scrollVideoValue");
     let i = 0;
 
     playVideo.onclick = function () {
@@ -101,20 +106,22 @@
       userVideo.pause();
     }
     fullVideo.onclick = function () {
-      if(i == 0){
-        fullVideo.classList.replace = "xi-switch-off"
+      if(i == 1){
+        fullVideo.classList.replace("xi-switch-off","xi-switch-on");
         userVideo.style.width = 1366 + "px"
         userVideo.style.height = 768 + "px" 
-        i = 1;
+        i = 0;
       }else{
+        fullVideo.classList.replace("xi-switch-on","xi-switch-off");
         userVideo.style.width = 700 + "px"
         userVideo.style.height = 300 + "px" 
-        i = 0;
+        i = 1;
       }
     }
 
     scrollVideo.onchange = function(){
       userVideo.currentTime = scrollVideo.value;
+      scrollVideoValue.innerHTML = "현재 타임라인 : " + scrollVideo.value;
     }
 
   </script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +12,40 @@
       padding: 0;
       margin-left: 50px;
     }
-    .divBox{
-      font-size: 10px;
-      width: 200px;
-      height: 200px;
-      border: 5px outset red;
+    .divBigBox{
+      width: 300px;
+      height: 100px;
+      background-color: gold;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 50px;
+      position: relative;
     }
+    .divBigBox:hover{
+      background-color: red;
+    }
+    .divBigBox:hover .divBox{
+      border-top: 30px solid red;
+    }
+    .divBox {
+      font-size: 10px;
+      width: 0px;
+      height: 0px;
+      line-height: 30px;
+      border-top: 30px solid gold;
+      border-bottom: 30px solid transparent; /* 색이 안보이는 */
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      top: 100px;
+      left: 145px;
+    }
+    
   </style>
 </head>
+
 <body>
   <h1>먹고 싶은 음식</h1>
   <nav>
@@ -48,10 +75,14 @@
     <li>2</li>
     <li>3</li>
   </ul>
-  <div class="divBox">Hello</div>
+  <div class="divBigBox">HELLO
+    <div class="divBox"></div>
+  </div>
+  
 
   <script>
 
   </script>
 </body>
+
 </html>

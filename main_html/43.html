@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    /*
+    .userBox{
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+    }
+    .box1{
+      top: 10px;
+      left: 10px;
+    }
+    .box2{
+      top: 10px;
+      left: 20px; 
+    }
+    .box3{
+      top: 10px;
+      left: 30px; 
+    } */
+    .myBigBox{
+      float: left;
+    }
+    .myTilte{
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      background-color: red;
+      color: white;
+      text-align: center;
+      line-height: 28px;
+      font-size: 20px;
+      position: relative;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .myTilte:hover .myAnju{
+      display: block;
+    }
+    .myTilte2{ 
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      background-color: red;
+      color: white;
+      text-align: center;
+      line-height: 28px;
+      font-size: 20px;
+      position: relative;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .myTilte2:hover .myAnju{
+      display: block;
+    }
+    .myAnju{
+      width: 100px;
+      height: 90px;
+      background-color: pink;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      display: none;
+      
+    }
+    .subAnju{
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 20px;
+    }
+    .subAnju:hover {
+      cursor: pointer;
+      background-color: palevioletred;
+    }
+  </style>
+</head>
+<body>
+
+  <!--<div class="userBox box1">abcd</div>
+  <div class="userBox box2">sdkfjlsfd</div>
+  <div class="userBox box3">sdfjkelfdjsdfklj klsdfjlksdjfjklef</div>
+    -->
+    <div class="myBigBox">
+      <div class="myTilte">소주안주
+        <div class="myAnju">
+          <p class="subAnju">회</p>
+          <p class="subAnju">바나나</p>
+          <P class="subAnju">피자</P>
+        </div>
+      </div>
+    
+      <div class="myTilte2">맥주안주
+        <div class="myAnju">
+          <p class="subAnju">치킨</p>
+          <p class="subAnju">양꼬치</p>
+          <P class="subAnju">새우튀김</P>
+        </div>
+      </div>
+    </div>
+ 
+</body>
+</html>

@@ -6,57 +6,113 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .stringList {
-      width: 100px;
-      height: 30px;
-      font-size: 20px;
-      text-align: center;
-      line-height: 30px;
-      border: 2px solid lightpink;
-      float: left;
-      margin: 10px;
-      color: white;
-      background-color: pink;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
 
-    .printDivBox {
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
       width: 800px;
       height: 300px;
       background-position: 20% 50%;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url("https://i.ytimg.com/vi/qDhOhTtPLng/maxresdefault.jpg");
+      font-family: 'Gaegu', cursive;
     }
+    .editList{
+      display: block;
+      margin-top: 20px;
+      clear: both;
+      color: white;
+      font-size: 25px;
+    }
+    .stringList {
+      width: 100px;
+      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      line-height: 35px;
+      border: 2px solid lightpink;
+      float: left;
+      margin: 10px;
+      color: white;
+      background-color: pink;
+      
+    }
+    [class *= "Btn"] {
+      display: inline-block;
+      font-size: 20px;
+      width: 100px;
+      height: 40px;
+      border: 1px solid palevioletred;
+      line-height: 40px;
+      text-align: center;
+      background-color: pink;
+      color: white;
+    }
+    [class *= "Btn"]:hover{
+      background-color: palevioletred;
+      cursor: pointer;
+    }
+
+  
   </style>
+
 </head>
 
 <body>
-  <div id="printDivBox" class="printDivBox">
-
-  </div>
-  <button id="delBtn" class="userBtn delBtn">del</button>
-  <button id="addBtn" class="userBtn addBtn">add</button>
-  <script>
-    let dleBtn = document.getElementById("dleBtn");
-    let addBtn = document.getElementById("addBtn");
+  <div id="printDivBox" class="printDivBox"></div>
+  <h1 class="editList">역 수정</h1>
+  <div>
+    역 번호 : <input id="stationNumber" type="number" min="1">
+    역명 : <input id="stationName" type="text">
+    <div id="editBtn" class="editBtn">역 수정</div>
+    <div id="addBtn" class="addBtn">역 추가</div>
+    <div id="delBtn" class="delBtn">역 삭제</div>
     
-    function classArray() {
+  </div>
+  
+  <script>
+    let editBtn = document.getElementById("editBtn");
+    let addBtn = document.getElementById("addBtn");
+    let delBtn = document.getElementById("delBtn");
+    let stationNumber = document.getElementById("stationNumber");
+    let stationName = document.getElementById("stationName");
+    let arrStation = ["중앙역", "한대앞", "상록수", "반월", "대야미", "수리산"];
+    
+
+    function classArray(arrStation) { 
       let printDivBox = document.getElementById("printDivBox");
-      let stringArr = ["중앙역", "한대앞", "상록수", "반월", "대야미", "수리산"];
       let i = 0;
-      while (i < stringArr.length) {
-        printDivBox.innerHTML += `<div class="stringList">${i + 1}.${stringArr[i]}</div>`;
+      while (i < arrStation.length) {
+        printDivBox.innerHTML += '<div class="stringList">'+ (i + 1) + '.' + arrStation[i]+ '</div>';
         i++;
       }
     }
-    //printMeassage(); 
-    classArray();
-    delBtn.onclick = function () {
-      console.log("del");
-    }
-    addBtn.onclick = function () {
-      console.log("add");
+    classArray(arrStation);
+
+    onclick = function (e) {
+      //console.log("a");
+      if (e.target.id == "editBtn"){
+        arrStation[parseInt(stationNumber.value) - 1] = stationName.value;
+        printDivBox.innerHTML = null;
+        classArray(arrStation);
+      }else if (e.target.id == "addBtn"){
+        arrStation.splice(parseInt(stationNumber.value) - 1, 0, stationName.value);
+        printDivBox.innerHTML = null;
+        classArray(arrStation);
+      }else if(e.target.id == "delBtn"){
+        arrStation.splice(parseInt(stationNumber.value) - 1, 1);
+        printDivBox.innerHTML = null;
+        classArray(arrStation);
+      }else{
+      }
     }
   </script>
 </body>

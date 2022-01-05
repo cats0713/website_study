@@ -6,41 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .stringList {
-      width: 100px;
-      height: 30px;
-      font-size: 20px;
-      text-align: center;
-      line-height: 30px;
-      border: 2px solid lightpink;
-      float: left;
-      margin: 10px;
-      color: white;
-      background-color: pink;
-    }
 
-    .printDivBox {
-      width: 800px;
-      height: 300px;
-      background-position: 20% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("https://i.ytimg.com/vi/qDhOhTtPLng/maxresdefault.jpg");
-    }
-  </style>
 </head>
 
 <body>
-  <div id="printDivBox" class="printDivBox">
- 
-  </div>
-  <button id="delBtn" class="userBtn delBtn">del</button>
-  <button id="addBtn" class="userBtn addBtn">add</button>
   <script>
-    let dleBtn = document.getElementById("dleBtn");
-    let addBtn = document.getElementById("addBtn");
-
     function userArr() {
       let userArr = [
         ["z", "r", "w", "d"],
@@ -82,26 +52,6 @@
       }
       i = 0;
     }
-
-    function classArray() {
-      let printDivBox = document.getElementById("printDivBox");
-      let stringArr = ["중앙역", "한대앞", "상록수", "반월", "대야미", "수리산"];
-      let i = 0;
-      while (i < stringArr.length) {
-        printDivBox.innerHTML += `<div class="stringList">${i + 1}.${stringArr[i]}</div>`;
-        i++;
-      }
-    }
-
-    //printMeassage(); 
-    classArray();
-    delBtn.onclick = function () {
-      console.log("del");
-    }
-    addBtn.onclick = function () {
-      console.log("add");
-    }
-
   </script>
 </body>
 

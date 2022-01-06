@@ -16,7 +16,9 @@
       margin: 0;
       padding: 0;
     }
-    html, body {
+
+    html,
+    body {
       width: 800px;
       height: 300px;
       background-position: 20% 50%;
@@ -25,16 +27,19 @@
       background-image: url("https://i.ytimg.com/vi/qDhOhTtPLng/maxresdefault.jpg");
       font-family: 'Gaegu', cursive;
     }
-    .editList{
+
+    .editList {
       display: block;
       margin-top: 20px;
       clear: both;
       color: white;
       font-size: 25px;
     }
-    .popUpBox{
+
+    .popUpBox {
       display: none;
     }
+
     .stringList {
       width: 100px;
       height: 30px;
@@ -46,9 +51,10 @@
       margin: 10px;
       color: white;
       background-color: pink;
-      
+
     }
-    [class *= "Btn"] {
+
+    [class *="Btn"] {
       display: inline-block;
       font-size: 20px;
       width: 100px;
@@ -59,12 +65,11 @@
       background-color: pink;
       color: white;
     }
-    [class *= "Btn"]:hover{
+
+    [class *="Btn"]:hover {
       background-color: palevioletred;
       cursor: pointer;
     }
-
-  
   </style>
 
 </head>
@@ -78,9 +83,9 @@
     <div id="editBtn" class="editBtn">역 수정</div>
     <div id="addBtn" class="addBtn">역 추가</div>
     <div id="delBtn" class="delBtn">역 삭제</div>
-    
+
   </div>
-  
+
   <script>
     let editBtn = document.getElementById("editBtn");
     let addBtn = document.getElementById("addBtn");
@@ -89,35 +94,39 @@
     let stationNumber = document.getElementById("stationNumber");
     let stationName = document.getElementById("stationName");
     let arrStation = ["중앙역", "한대앞", "상록수", "반월", "대야미", "수리산"];
-    
 
-    function classArray(arrStation) { 
+
+    function classArray(arrStation) {
       let printDivBox = document.getElementById("printDivBox");
       let i = 0;
       while (i < arrStation.length) {
-        printDivBox.innerHTML += '<div class="stringList">'+ (i + 1) + '.' + arrStation[i]+ '</div>';
+        printDivBox.innerHTML += '<div class="stringList">' + (i + 1) + '.' + arrStation[i] + '</div>';
         i++;
       }
     }
     classArray(arrStation);
-    editList.onclick = function(){
+    editList.onclick = function () {
       popUpBox.style.display = "block";
     }
     onclick = function (e) {
       //console.log("a");
-      if (e.target.id == "editBtn"){
-        arrStation[parseInt(stationNumber.value) - 1] = stationName.value;
-        printDivBox.innerHTML = null;
-        classArray(arrStation);
-      }else if (e.target.id == "addBtn"){
-        arrStation.splice(parseInt(stationNumber.value) - 1, 0, stationName.value);
-        printDivBox.innerHTML = null;
-        classArray(arrStation);
-      }else if(e.target.id == "delBtn"){
-        arrStation.splice(parseInt(stationNumber.value) - 1, 1);
-        printDivBox.innerHTML = null;
-        classArray(arrStation);
-      }else{
+      switch (e.target.id) {
+        case "editBtn":
+          arrStation[parseInt(stationNumber.value) - 1] = stationName.value;
+          printDivBox.innerHTML = null;
+          classArray(arrStation);
+          break;
+        case "addBtn":
+          arrStation.splice(parseInt(stationNumber.value) - 1, 0, stationName.value);
+          printDivBox.innerHTML = null;
+          classArray(arrStation);
+          break;
+
+        case "delBtn":
+          arrStation.splice(parseInt(stationNumber.value) - 1, 1);
+          printDivBox.innerHTML = null;
+          classArray(arrStation);
+          break;
       }
     }
   </script>

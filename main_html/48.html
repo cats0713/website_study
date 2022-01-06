@@ -15,22 +15,38 @@
       background-color: yellowgreen;
       border-radius: 50%;
       color: white;
-      position: absolute;
-      left: -200px;
-      top: -200px;
     }
   </style>
 </head>
 <body>
   <div id="displayNumber" class="displayNumber">0</div>
+  <button id="startBtn" class="startBtn">start</button>
+  <button id="stopBtn" class="stopBtn">stop</button>
+
   <script>
+    let startBtn = document.getElementById("startBtn");
+    let stopBtn = document.getElementById("stopBtn");
     let displayNumber = document.getElementById("displayNumber");
-    let countLeft = -200;
+    let countNumber = 0;
+    let numberHandler;
+    let startBtnCount = 0;
+
     function countAction(){
-      displayNumber.style.left = ++countLeft + "px";
-      displayNumber.style.top = ++countLeft + "px"; 
+      displayNumber.innerHTML = ++countNumber;
     }
-    setInterval("countAction()", 10);
+
+    startBtn.onclick = function(){
+      startBtnCount++;
+      if( startBtnCount == 1){
+        numberHandler = setInterval("countAction()", 1000);
+      }
+      
+    }
+    
+    stopBtn.onclick = function(){
+      startBtnCount = 0;
+      clearInterval(numberHandler);
+    }
   </script>
 </body>
 </html>

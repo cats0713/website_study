@@ -32,6 +32,9 @@
       color: white;
       font-size: 25px;
     }
+    .popUpBox{
+      display: none;
+    }
     .stringList {
       width: 100px;
       height: 30px;
@@ -68,8 +71,8 @@
 
 <body>
   <div id="printDivBox" class="printDivBox"></div>
-  <h1 class="editList">역 수정</h1>
-  <div>
+  <h1 id="editList" class="editList">역 수정하기</h1>
+  <div id="popUpBox" class="popUpBox">
     역 번호 : <input id="stationNumber" type="number" min="1">
     역명 : <input id="stationName" type="text">
     <div id="editBtn" class="editBtn">역 수정</div>
@@ -82,6 +85,7 @@
     let editBtn = document.getElementById("editBtn");
     let addBtn = document.getElementById("addBtn");
     let delBtn = document.getElementById("delBtn");
+    let editList = document.getElementById("editList");
     let stationNumber = document.getElementById("stationNumber");
     let stationName = document.getElementById("stationName");
     let arrStation = ["중앙역", "한대앞", "상록수", "반월", "대야미", "수리산"];
@@ -96,7 +100,9 @@
       }
     }
     classArray(arrStation);
-
+    editList.onclick = function(){
+      popUpBox.style.display = "block";
+    }
     onclick = function (e) {
       //console.log("a");
       if (e.target.id == "editBtn"){

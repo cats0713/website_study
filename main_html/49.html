@@ -9,14 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <style>
     * {
       margin: 0;
-      padding: 0;
-      font-family: 'Gaegu', cursive;
+      padding: 0;  
     }
 
     .ms_second {
+      font-family: 'Gaegu', cursive;
       position: absolute;
       width: 546px;
       height: 402px;
@@ -74,6 +75,17 @@
 
     .checkBtn:hover {
       background-color: #e1ffb1;
+      cursor: pointer;
+    }
+    .xBox{
+      position: absolute;
+      top: 7px;
+      left: 15px;
+      font-size: 30px;
+      color: #aed581;
+    }
+    .xBox:hover{
+      color: #e1ffb1;
       cursor: pointer;
     }
 
@@ -150,6 +162,7 @@
       <input type="number" name="userMsNumber" id="userMsNumber1" class="userMsNumber">
       <p class="inputMs">ms</p>
       <div id="checkBtn1" class="checkBtn">확인</div>
+      <div id="xBox1" class="xBox">x</div>
       <div id="resultBox1" class="resultBox">0</div>
     </div>
 
@@ -163,6 +176,7 @@
       <input type="number" name="userSecond" id="userSecond" class="userSecond">
       <p class="userInput2 inputSecond">초</p>
       <div id="checkBtn2" class="checkBtn">확인</div>
+      <div id="xBox2" class="xBox">x</div>
       <div id="resultBox2" class="resultBox">0</div>
     </div>
   </div>
@@ -172,6 +186,7 @@
     let userMsNumber1 = document.getElementById("userMsNumber1");
     let checkBtn1 = document.getElementById("checkBtn1");
     let resultBox1 = document.getElementById("resultBox1");
+    let xBox1 = document.getElementById("xBox1");
 
     let userDay = document.getElementById("userDay");
     let userHours = document.getElementById("userHours");
@@ -179,6 +194,7 @@
     let userSecond = document.getElementById("userSecond");
     let checkBtn2 = document.getElementById("checkBtn2");
     let resultBox2 = document.getElementById("resultBox2");
+    let xBox2 = document.getElementById("xBox2");
 
     checkBtn1.onclick = function () {
       let msTrans = 0;
@@ -231,6 +247,18 @@
 
     }
 
+    xBox1.onclick = function () {
+      userMsNumber1.value = null;
+      resultBox1.innerHTML = 0;
+    }
+
+    xBox2.onclick = function () {
+      userDay.value = null;
+      userHours.value = null;
+      userMin.value = null;
+      userSecond.value = null;
+      resultBox2.innerHTML = 0;
+    }
   </script>
 </body>
 

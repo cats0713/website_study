@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <script>
+    let userArr1 = [
+      1004,
+      1005,
+      {
+        zard: {
+          'red': 99,
+          'min': [10, 20, 30],
+        },
+        'cdr': [0, 1, 2, 3],
+        'ahyeon': 2
+      },
+      1007
+    ];
+    const userArr2 = [
+      99, { 'cemy': 10, 'stormy': 6, 'windy': 80 }, 101
+    ];
+
+    for (k in userArr2) {
+      console.log(k);
+        switch (k) {
+          case '1':
+            for (j in userArr2[k]) {
+              console.log(userArr2[k][j]);
+              break;
+            }
+            default : console.log(userArr2[k]); break;
+          };
+    }
+
+
+  </script>
+</body>
+
+</html>

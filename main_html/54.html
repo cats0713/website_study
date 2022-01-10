@@ -17,28 +17,101 @@
       {
         zard: {
           'red': 99,
-          'min': [10, 20, 30],
+          'min': [101, 20, 30],
         },
         'cdr': [0, 1, 2, 3],
         'ahyeon': 2
       },
       1007
     ];
+
     const userArr2 = [
       99, { 'cemy': 10, 'stormy': 6, 'windy': 80 }, 101
     ];
+    const ahHuman = {
+      'head': 'black',
+      'arms': 2,
+      'legs': function () {
+        console.log("달린다.");
+      }
+    };
 
-    for (k in userArr2) {
-      console.log(k);
+    //ahHuman.legs();
+
+    function userArrcal() {
+      for (k in userArr2) {
+        console.log(k);
         switch (k) {
           case '1':
             for (j in userArr2[k]) {
               console.log(j);
               console.log(userArr2[k][j]);
-            }break;
-            default : console.log(userArr2[k]); break;
-          };
+            } break;
+          default: console.log(userArr2[k]); break;
+        };
+      }
     }
+    //userArrcal();
+
+    function funcCal(func, num) {
+      return func(num);
+    }
+    function increase(num) {
+      return num + 1;
+    }
+    function decrese(num) {
+      return num - 1;
+    }
+
+    //console.log(funcCal(increase, 1));
+    //console.log(funcCal(decrese, 1));
+
+    function userCal(mode) {
+      const userFunc = {
+        'plus': function (num1, num2) { return num1 + num2 },
+        'minus': function (num1, num2) { return num1 - num2 }
+      }
+      return userFunc[mode];
+    }
+
+    //console.log(userCal('plus')(2, 1)); //리턴값이 함수라는걸 알수있다.
+    //console.log(userCal('minus')(2, 1));
+
+    const userProcess = [
+      function (input) { return input + 10; },
+      function (input) { return input * input; },
+      function (input) { return input / 2 }
+    ];
+
+    let input = 1;
+    let i = 0;
+    while (i < userProcess.length) {
+      input = userProcess[i](input);
+      i++;
+    }
+
+    //console.log(input);
+
+    function userSum() { //이런식으로는 사용하지 말 것
+      let i = 0, userSum1 = 0;
+      while (i < arguments.length) {
+        console.log(i + arguments[i]);
+        userSum1 += arguments[i];
+        i++;
+      }
+      return userSum1;
+    }
+    document.write(userSum(1, 2, 3, 4));
+
+
+    function addCal(num1 = 0, num2 = 0, num3 = 0) {
+      if (arguments.length == 3) { //오류 검출하는데에 사용하는 것은 괜찮다.
+        return num1 + num2 + num3;
+      } else {
+        console.log('error');
+      }
+    }
+    console.log(addCal(10, 20, 30));
 
 
   </script>

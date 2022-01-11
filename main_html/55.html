@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      font-family: 'Dongle', sans-serif;
+    }
+    .bigBox{
+      width: 17rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -8.5rem;
+      margin-left: -8.5rem;
+    }
+    .middleBox{
+      width: 17rem;
+      height: 21rem;
+      background-color: pink;
+      border-radius: 1rem;
+      box-shadow: 0.3rem 0.3rem 0.5rem lightgray;
+      
+    }
+    .userImg{
+      width: 15rem;
+      height: 15rem;
+      background-size: cover;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+    .prevBtn{
+      float: left;
+      font-size: 1.5rem;
+      display: inline-block; 
+      text-align: center;
+      line-height: 2rem;
+      color: white;
+      width: 7rem;
+      height: 2rem;
+      background-color: red;
+      margin-left: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0.1rem 0.1rem 0.2rem gray;
+    }
+    .nextBtn{
+      float: left;
+      font-size: 1.5rem;
+      display: inline-block;
+      text-align: center;
+      line-height: 2rem;
+      color: white;
+      width: 7rem;
+      height: 2rem;
+      background-color: red;
+      margin-left: 0.9rem;
+      box-shadow: 0.1rem 0.1rem 0.2rem gray;
+      border-radius: 1rem;
+      
+    }
+    [class *= Btn]:hover{
+        background-color: palevioletred;
+        cursor: pointer;
+    }
+    .catInfo{
+      float: left;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      width: 17rem;
+      height: 2rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="bigBox">
+    <div class="middleBox">
+      <img id="userImg" class="userImg" src="https://w.namu.la/s/b36caddd5e3f99c429377fd3c3325f896ceed084cb31a90dc6276d1d0580c244ab58ae6fa15e84d8a36742ad40d528d778af9dd18d0ab68c968cd9d4d63aaf85dd4e07277e2da73cdfd87fc4a758f0e1" alt="야통이사진">
+      <div id="prevBtn" class="prevBtn">이전</div>
+      <div id="nextBtn" class="nextBtn">다음</div>
+      <div id="catInfo" class="catInfo">이름 / 나이</div>
+    </div>
+  </div>
+  
+
+  <script>
+    function studyObject1() {
+      let userPerson = {
+        name: 'yah'
+      };
+      userPerson.introduce = function () {
+        return `my name id ${this.name}`; //객체내에 this는 자기 자신을 가리킴
+      }
+      console.log(userPerson.introduce());
+    }
+
+    //sudyObject1();
+
+    function obPerson(name) {
+      this.name = name;
+      this.introduce = function () {
+        return `my naem ${this.name}`;
+      }
+    }
+    //let yah = new obPerson('yah');
+    //console.log(yah.introduce());
+
+    let indexCont = 1;
+    let userImg = document.getElementById('userImg');
+    let catInfo = document.getElementById('catInfo');
+
+    function obCat(name, age, imgPath) {
+      this.name = name;
+      this.age = age;
+      this.imgPath = imgPath;
+      this.printImg = function () {
+        userImg.setAttribute("src", imgPath);
+        catInfo.innerHTML = `이름 : ${this.name} ${this.age}살`;
+      }
+    }
+
+    let cat1 = new obCat('야통이', '3', 'https://i.ytimg.com/vi/AwrFPJk_BGU/maxresdefault.jpg');
+    let cat2 = new obCat('삼색이', '6', 'https://i.ytimg.com/vi/3BdpG2qbcW8/maxresdefault.jpg');
+    let cat3 = new obCat('무', '3', 'https://w.namu.la/s/d31c2d0c023a02eeeda048907190192057f59d108c2e61cc734551ee7e44d3b6fa46d361022fd24e63c3281d0ac478fdaefadd0fb3736ffb4f354a0ccfff46141acd7794bb90d7bbf1de9ad06804f443');
+
+    this.onclick = function (e) {
+
+      if (e.target.id == 'prevBtn' || e.target.id == 'nextBtn') {
+        if (e.target.id == 'prevBtn') {
+          if (indexCont < 0) {
+            alert('더이상의 정보가 없습니다.');
+            indexCont = 0;
+          } else {
+            indexCont--;
+          }
+        } else if (e.target.id == 'nextBtn') {
+          if (indexCont > 2) {
+            alert('더 이상의 정보가 없습니다.');
+            indexCont = 2;
+          }else{
+            indexCont++;
+          }
+        }
+        switch(indexCont){
+          case 0: cat1.printImg(); break;
+          case 1: cat2.printImg(); break;
+          case 2: cat3.printImg(); break;
+        }
+
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

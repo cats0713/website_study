@@ -1,0 +1,62 @@
+$userBackColor: pink;
+$userColor: red;
+
+$navWidth: 50rem;
+$navheight: 6.25rem;
+
+$navLogoSize: 6.25rem;
+$navVenaSize: 6.25rem;
+$navLoginSize: 6.25rem;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  position: relative;
+  background-color: red;
+  width: $navWidth;
+  height: $navheight;
+
+  .navLogo{
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 6.25rem;
+    height: $navLogoSize;
+    background-color: $userBackColor;
+    line-height: $navLogoSize;
+    text:{
+      align: center;
+    }
+  }
+
+  .navVena{
+    position: absolute;
+    left: 50%;
+    margin:{
+      left: -$navVenaSize/2;
+    }
+    display: inline-block;
+    width: 6.25rem;
+    height: $navVenaSize;
+    background-color: $userBackColor;
+    line-height: $navVenaSize;
+    text:{
+      align: center;
+    }
+  }
+
+  .navLogin{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 6.25rem;
+    height: $navLoginSize;
+    background-color: $userBackColor;
+    line-height: $navLoginSize;
+    text:{
+      align: center;
+    }
+  }
+}

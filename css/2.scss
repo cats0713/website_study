@@ -1,0 +1,35 @@
+@charset "utf-8";
+$boxWidth: 10rem;
+$boxheight: 10rem;
+
+*{
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f3;
+}
+
+div{
+  div{
+  color: red; 
+  }
+}
+
+[class *= 'Box'] {
+  display: inline-block;
+  width: $boxWidth;
+  height: $boxheight;
+  background-color: #f0f0f3;
+  margin: 1rem;
+  text-align: center;
+  line-height: $boxheight - 0.01rem;
+  box-shadow: -0.6rem -0.6rem 20px #ffffff, 0.6rem 0.6rem 20px #0D2750 ;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+[class *= 'Box']:hover{
+  background-color: #ffffff;
+  cursor: pointer;
+}

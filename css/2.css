@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f3;
+}
+
+div div {
+  color: red;
+}
+
+[class*='Box'] {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  background-color: #f0f0f3;
+  margin: 1rem;
+  text-align: center;
+  line-height: 9.99rem;
+  -webkit-box-shadow: -0.6rem -0.6rem 20px #ffffff, 0.6rem 0.6rem 20px #0D2750;
+          box-shadow: -0.6rem -0.6rem 20px #ffffff, 0.6rem 0.6rem 20px #0D2750;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+[class*='Box']:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+/*# sourceMappingURL=2.css.map */

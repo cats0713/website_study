@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
-    .box{
+
+    .userBtn {
       width: 25rem;
       height: 8rem;
-      transform: rotate(90deg) translate(0rem, 0rem);
       background-color: red;
     }
   </style>
 </head>
+
 <body>
-  <div class="box"></div>
+  <input id="userBtn" class="userBtn" type="button">
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <ul class="classA">
+    <li class="className">HTML</li>
+    <li class="className">CSS</li>
+    <li class="className">JavaScript</li>
+  </ul>
+  <script>
+    let classA = document.querySelectorAll(".classA li");
+    let liListAll = document.querySelectorAll("li");
+
+    userBtn.onclick = function () {
+      location.href = 'https://naver.com';
+    }
+
+    for(let i in classA){
+      classA[i].style.color = 'red';
+    }
+
+
+    //let i = 0;
+   // while(i<liListAll.length){
+     // liListAll[i].style.color='pink';
+     // i++;
+    //}
+    //classA.style.color = 'blue';
+
+
+  </script>
 </body>
+
 </html>

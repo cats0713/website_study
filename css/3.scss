@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+$userBackgrund: #f0f0f3;
+$darkShadow: #aeaec0;
+$inputW:10rem;
+$inputH:8rem;
+
+@mixin textSetting($color){
+  text-align: center;
+  background-color: $color;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  background-color: $userBackgrund;
+}
+
+div{
+
+  [class *= 'user']{
+        @include textSetting($userBackgrund):;
+    display: inline-block;
+    width: $inputW;
+    height: $inputH;
+    background-color: $userBackgrund;
+    box-shadow: -0.625rem -0.625rem 1rem #fff, 0.625rem 0.625rem 1rem $darkShadow;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+  .userA{
+
+  }
+  .userB{
+
+  }
+  .userResult{
+    @include textSetting($userBackgrund);
+    line-height: 8rem;
+  }
+  .userResult:hover{
+    background-color: $userBackgrund;
+    cursor: pointer;
+  }
+}

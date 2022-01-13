@@ -1,39 +1,46 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 nav {
   position: relative;
   background-color: red;
   width: 50rem;
-  height: 6.25rem; }
-  nav .navLogo {
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    width: 6.25rem;
-    height: 6.25rem;
-    background-color: pink;
-    line-height: 6.25rem;
-    text-align: center; }
-  nav .navVena {
-    position: absolute;
-    left: 50%;
-    margin-left: -3.125rem;
-    display: inline-block;
-    width: 6.25rem;
-    height: 6.25rem;
-    background-color: pink;
-    line-height: 6.25rem;
-    text-align: center; }
-  nav .navLogin {
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    width: 6.25rem;
-    height: 6.25rem;
-    background-color: pink;
-    line-height: 6.25rem;
-    text-align: center; }
+  height: 6.25rem;
+}
 
+nav .navLogo {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: pink;
+  line-height: 6.25rem;
+  text-align: center;
+}
+
+nav .navVena {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.125rem;
+  display: inline-block;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: pink;
+  line-height: 6.25rem;
+  text-align: center;
+}
+
+nav .navLogin {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: pink;
+  line-height: 6.25rem;
+  text-align: center;
+}
 /*# sourceMappingURL=1.css.map */

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f3;
+}
+
+div [class*='user'] {
+  text-align: center;
+  background-color: #f0f0f3;
+  display: inline-block;
+  width: 10rem;
+  height: 8rem;
+  background-color: #f0f0f3;
+  -webkit-box-shadow: -0.625rem -0.625rem 1rem #fff, 0.625rem 0.625rem 1rem #aeaec0;
+          box-shadow: -0.625rem -0.625rem 1rem #fff, 0.625rem 0.625rem 1rem #aeaec0;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+div .userResult {
+  text-align: center;
+  background-color: #f0f0f3;
+  line-height: 8rem;
+}
+
+div .userResult:hover {
+  background-color: #f0f0f3;
+  cursor: pointer;
+}
+/*# sourceMappingURL=3.css.map */

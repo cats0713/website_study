@@ -1,0 +1,198 @@
+@charset "utf-8";
+$backColor:#f7f9fa; 
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: '맑은고딕',sans-serif;
+}
+.naverBox{
+  width: 35rem;
+  height: 13.5rem;
+
+  border: 0.2rem solid #dae1e6;
+  text-align: center;
+  
+  div, p {
+    background-color: $backColor;
+  }
+
+  .naverInnerBox{
+    padding: 1.6rem 1.6rem 1.2rem 1.7rem;
+    width: 31.8rem;
+    height: 10.7rem;
+
+    p{
+      float: left;
+      font-size: 1.2rem;
+      
+
+    }
+
+    .naverLogin{
+      display: block;
+      width: 31.5rem;
+      height: 4.8rem;
+      margin-top: 2.5rem;
+      background-color: #17CE5F;
+      //font-family: ;
+      text-align: center;
+      line-height: 4.6rem;
+
+    }
+    .linkBox{
+      width: 31.5rem;
+      height: 4.8rem;
+
+      .loginId{}
+
+      }
+
+      .passWord{
+
+      }
+      .singUp{
+
+      }
+
+    }
+
+}
+
+
+.newsVene{
+  margin-top: 10rem;
+  width: 75rem;
+  height: 4.9rem;
+  background-color: #f7f9fa;
+  text-align: center;
+  border: 0.1rem solid lightgrey;
+
+  .newsLink{
+    float: left;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+  }
+  .newsText{
+    float: left;
+    text-align: left;
+    width: 31rem;
+    height: 2.4rem;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.3rem;
+    font-weight: 700; 
+  }  .linkBox2{
+    float: right;
+    margin-right: 2rem;
+    margin-top: 2rem;
+
+  }
+  .newsIcon{
+    float: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0.7rem;
+
+  }
+
+}
+
+
+footer{
+  margin-top: 2rem;
+  text-align: center;
+
+  hr{
+    border-style:solid; 
+    border-width:1px 0 0 0;
+    width: 90rem;
+    text-align: center;
+    //height: 0.1rem;
+    border-color:#e4e8eb;
+  }
+  .noteLink{
+    color: black;
+    display: block;
+    height: 3rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .cBox{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    text-align: left;
+    height: 3rem;
+    div{
+      margin-left: 10rem;
+    }
+  }
+  .pBox{
+    margin-left: 1rem;
+    text-align: left;
+    height: 3rem; 
+    div{
+      margin-left: 10rem;
+    }
+  }
+  .dBox{
+    margin-left: 1rem;
+    text-align: left;
+    height: 3rem;
+    margin-bottom: 1rem;
+    div{
+      margin-left: 10rem;
+    }
+  }
+
+
+
+  h1, h2, h3{
+    color: #202020;
+    float: left;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  a{
+    text-align: left;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  a:link { 
+    color: #777;
+    text-decoration: none;
+  } 
+  a:visited {
+    color: #777;
+  } 
+  a:hover {
+    color: #777;
+    text-decoration: underline;
+  } 
+  a:active {
+    color: #777;
+  } 
+
+  .textBox, .imgBox{
+    display: inline-block;
+    float: left;
+  }
+  .imgBox{
+
+    div{
+      display: inline;
+    }
+  }
+}

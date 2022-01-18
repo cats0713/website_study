@@ -21,3 +21,8 @@ let myDiv = new DivClass(4,2,'pink','arrA');
 myDiv.divDisplay();
 myDiv.divDeco();
 console.log(myDiv.divWidth);
+
+let num = -1;
+
+let kind = num ? (num > 0 ? '양수' : '음수') : '영';
+console.log(kind);

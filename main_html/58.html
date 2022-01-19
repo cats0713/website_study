@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    /*let A = [1,2,3];
+    let B = [];
+
+    B.push(...A);
+    B[1] = 1004;
+
+    console.log(A);
+    console.log(B);
+    */
+
+    /*let userA = [1,"eewe",2,3,4];
+
+    let userFunc = (...rest) => {
+      console.log(rest);
+    }
+    userFunc(...[1,2,3]);*/
+
+    /*let a = {'id': 1};
+    let b = a;
+    b.id = 2;
+    console.log(a.id);*/
+
+    // let a = 1;
+    // let func = b => {
+    //   b = 2;
+    // }
+    // func(a);
+    // console.log(a);
+
+    let a = {'id': 1};
+    let func = b => {
+      b.id = 2;
+    }
+    func(a);
+    console.log(a.id);
+
+  </script>
+</body>
+
+</html>

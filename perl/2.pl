@@ -1,17 +1,17 @@
 #!/usr/bin/perl
 
-%myhash = ("a",1 ,"b",2, "c",3);
-@userarr = (1,2,3,4,5);
+# %myhash = ("a",1 ,"b",2, "c",3);
+# @userarr = (1,2,3,4,5);
 
-$userarr[9] = 9;
-print $userarr,"\n";
+# $userarr[9] = 9;
+# print $userarr,"\n";
 
 # $mycont = 3;
 # print $mycont,"\n";
 
 # print @userarr;
-# #$howmany = $myhash{"c"};
-# #print "$howmany\n"
+# $howmany = $myhash{"c"};
+# print "$howmany\n"
 
 # #$howmany = $myhash{"a"};
 
@@ -28,3 +28,33 @@ print $userarr,"\n";
 
 # print "Ending our greeting\n";
 
+# print "Say yes or No : ";
+# $answer = <STDIN>;
+# chomp $answer;
+# if($answer eq 'yes'){
+#   print <<EOY;
+# You said $answer.
+# I will keep going on.
+# EOY
+# }else{print "you said no\n"};
+
+# @arrA = ("hello", "there","i\'m","OK","\n");
+# print "@arrA";
+# print @arrA;
+# %fruits = ( "apple", 3, "pear", 5, "banana", 2 );
+# print "%fruits\n";
+
+# @a = (1,2,3);
+# $b = 2;
+# $a = 10;
+# $b = $a;
+# print "$b\n";
+
+$a = "hello" . "world";
+print $a;
+$a = "hello" x3;
+print $a;
+$a .= "World\n";
+print $a;
+$b = 0;
+print ++($b = 'a99');

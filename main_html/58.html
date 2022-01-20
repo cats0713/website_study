@@ -15,8 +15,8 @@
 </head>
 
 <body>
-
-
+  <input id="userTel" type="tel">
+  <button id="checkBtn">확인</button>
   <script>
     /*let A = [1,2,3];
     let B = [];
@@ -54,8 +54,31 @@
     // func(a);
     // console.log(a.id);
 
-    let userA = "hello";
+    // let checkBtn = document.querySelector("#checkBtn");
+    // let userEx =  /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/; //전화번호
+    
+    // checkBtn.addEventListener("click",function(){
+    //   let userTel = document.querySelector("#userTel").value;
+    //   if(userEx.test(userTel)){
+    //     alert("pass");
 
+    //   }else{
+    //     alert("no");
+    //   }
+    // });
+
+    let checkBtn = document.querySelector("#checkBtn");
+    let userEx =  /^.*(?=^.{1,7}$)(?=.*[a-z])(?=.*[0-9]{1}).*$/;
+    
+    checkBtn.addEventListener("click",function(){
+      let userTel = document.querySelector("#userTel").value;
+      if(userEx.test(userTel)){
+        alert("pass");
+
+      }else{
+        alert("no");
+      }
+    });
 
 
   </script>

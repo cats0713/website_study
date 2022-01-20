@@ -50,11 +50,28 @@
 # $b = $a;
 # print "$b\n";
 
-$a = "hello" . "world";
-print $a;
-$a = "hello" x3;
-print $a;
-$a .= "World\n";
-print $a;
-$b = 0;
-print ++($b = 'a99');
+# $a = "hello" . "world";
+# print $a;
+# $a = "hello" x3;
+# print $a;
+# $a .= "World\n";
+# print $a;
+# $b = 0;
+# print ++($b = 'a99');
+
+# $long = "tell me what\'s up";
+
+# if($long =~ /hat/){
+#   print "Yes\n";
+# }else{
+#   print "no\n";
+# }
+
+$long = "*Where is my baby, Oh Baby";
+print $long, "\n";
+
+if($long =~ tr/a-z/A-Z/){
+  print "$long\n";
+}else{
+  print "no\n";
+}

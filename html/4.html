@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    .userImg {
+      position: relative;
+      background-image: url("https://i.ytimg.com/vi/vf8t8LgZj74/maxresdefault.jpg");
+      width: 1280px;
+      height: 720px;
+      opacity: 0.5;
+    }
+    .headImg {
+      position: absolute;
+      top: 70px;
+      left: 120px;
+      width: 200px;
+      height: 100px;
+      cursor: pointer;
+
+    }
+    .headImg:hover{
+      background-color: rgb(255, 0, 0, 0.3);
+    }
+
+    </style>
+</head>
+<body>
+  <!-- 불투명한데 이미지 밝게 하는방법~
+    1. 배경 두개를 준비한다 호버될 위치가 선명한 이미지, 모두 흐릿한 이미지 호버 됬을때 배경이미지를 바꾼다.
+    2. div가 호버될때 div에 준비한 선명한 사진을 넣는다.
+  -->
+
+  <!-- <img class="userA" src="https://mblogthumb-phinf.pstatic.net/MjAyMDA4MjZfMTUg/MDAxNTk4NDE3NDg3MzE1.1ERaKy5R9GsFkBNP3WHJ45EykSSvqH8nGZRpYDp4Ojwg.P6OaJLh9pbd03clw_4ct3bkndwwMmvPcANJBb1q-84Ag.JPEG.platz29/IMG_2389.JPG?type=w800" alt="삼색이 사진" usemap="#user">
+
+  <map  name="user">
+    <area class="userB" shape="circle" coords="100,100,100" href="https://naver.com" alt="네이버 이동">
+    <area shape="rect" coords="200,200,250,250" href="https://www.google.com/search?q=%EC%82%BC%EC%83%89%EC%9D%B4&tbm=isch&ved=2ahUKEwiT-_yK08n1AhVRCt4KHeXLDIgQ2-cCegQIABAA&oq=%EC%82%BC%EC%83%89%EC%9D%B4&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgAEBg6CAgAEIAEELEDOgsIABCABBCxAxCDAVDXBVilE2DcFGgBcAB4AIABd4gBwQmSAQQwLjExmAEAoAEBqgELZ3dzLXdpei1pbWewAQDAAQE&sclient=img&ei=ODjuYZP_KtGU-Abll7PACA&bih=764&biw=1314#imgrc=Tc3J9n7_EfXqMMm" alt="네이버 이동">
+  </map> -->
+
+  <div class="userImg">
+    <div class="headImg"></div>
+  </div>
+</body>
+</html>

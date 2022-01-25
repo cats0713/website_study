@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+$boxWidth: 26rem;
+$boxHeight: 38.5rem;
+$inputWidth: 22rem;
+$inputHeight: 4rem;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Noto Sans KR', sans-serif;;
+}
+input, canvas, button{
+  display: inline-block;
+  width: $inputWidth;
+  height: $inputHeight;
+  border: 0;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem #8d8d8d,inset 0.1rem 0.1rem 0.1rem #fff;
+
+}
+.bigBox{
+  width: $boxWidth;
+  height: $boxHeight;
+  background-color: #efefef;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem #8d8d8d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+  text-align: center;
+  .userID{
+    margin-top: 2.5rem;
+  }
+  .userPass{
+    margin-top: 2rem;
+  }
+  canvas{
+    margin-top: 2rem;
+  }
+  .userCC{
+    margin-top: 2rem;
+  }
+  button{
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+  button:hover{
+    background-color: darkolivegreen;
+    color: white;
+    cursor: pointer;
+  }
+
+}

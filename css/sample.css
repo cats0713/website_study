@@ -73,4 +73,62 @@
 .showADBox .linkBox div a:visited {
   color: blue;
 }
+
+.youtubeVideo {
+  width: 80rem;
+  height: 80rem;
+  background-color: bisque;
+}
+
+.youtubeVideo .youVideo {
+  margin: 3rem;
+  width: 74rem;
+  height: 40rem;
+  background-color: brown;
+}
+
+.youtubeVideo .linkTag {
+  width: 74rem;
+  height: 9rem;
+  margin-left: 2.5rem;
+  border-bottom: 0.1rem solid lightgrey;
+}
+
+.youtubeVideo .linkTag p {
+  font-size: 2rem;
+}
+
+.youtubeVideo .linkTag .iconBox {
+  width: 74rem;
+  height: 4rem;
+  margin-top: 0.5rem;
+  line-height: 4rem;
+}
+
+.youtubeVideo .linkTag .iconBox .johel {
+  width: 45rem;
+  height: 4rem;
+  display: inline-block;
+}
+
+.youtubeVideo .linkTag .iconBox [class*="icon"] {
+  width: 6rem;
+  height: 3rem;
+  display: inline-block;
+  background-color: cadetblue;
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+  text-align: center;
+}
+
+.youtubeVideo .linkTag .iconBox [class*="icon"]:hover {
+  cursor: pointer;
+}
+
+.youtubeVideo .bottomBox {
+  width: 74rem;
+  height: 10rem;
+  background-color: lightpink;
+  margin-left: 3rem;
+}
 /*# sourceMappingURL=sample.css.map */

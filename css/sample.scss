@@ -72,8 +72,60 @@
   
       }
     }
-    
+  }
+}
 
+//여기부터 유튜브
+.youtubeVideo{
+  width: 80rem;
+  height: 80rem;
+  background-color: bisque;
+  .youVideo{
+    margin: 3rem;
+    width: 74rem;
+    height: 40rem;
+    background-color: brown;
+  }
+  .linkTag{
+    width: 74rem;
+    height: 9rem;
+
+    margin-left: 2.5rem;
+    border-bottom: 0.1rem solid lightgrey;
+
+    p{
+      font-size: 2rem;
+    }
     
+    .iconBox{
+      width: 74rem;
+      height: 4rem;
+      margin-top: 0.5rem;
+      line-height: 4rem;
+      .johel{
+        width: 45rem;
+        height: 4rem;
+        display: inline-block;
+      }
+      [class *= "icon"]{
+        width: 6rem;
+        height: 3rem;
+        display: inline-block;
+        background-color: cadetblue;
+        margin-top: 0.5rem;
+        margin-left: 0.3rem;
+        text-align: center;
+      }
+      [class *= "icon"]:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bottomBox{
+    width: 74rem;
+    height: 10rem;
+    background-color: lightpink;
+    margin-left: 3rem;
   }
 }

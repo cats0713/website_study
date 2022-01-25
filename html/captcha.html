@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="../css/captcha.css">
+</head>
+
+<body>
+
+
+
+  <div class="bigBox">
+    <input class="userID" type="text" placeholder="ID 입력" tabindex="10" autofocus required autocomplete="off"
+      id="userID">
+    <input class="userPass" type="password" placeholder="password 입력" tabindex="20" required autocomplete="off"
+      id="userPass">
+      <div id="textBox"></div>
+    <input class="userCC" type="text" placeholder="캡챠인증" tabindex="30" required autocomplete="off" id="userCC">
+    <button tabindex="40" id="userBtn">LOGIN</button>
+    <div id="textBox2"></div>
+  </div>
+
+  <script src="../js/captcha.js"> </script>
+</body>
+
+</html>

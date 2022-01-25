@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>closure</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .userBox{
+      width: 200px;
+      height: 100px;
+      background-color: rosybrown;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggleBtn">toggle</button>
+  <div class="userBox"></div>
+
+
+  <script>
+    // function someD(){
+    //   let anyV = 0;
+    //   function hoho(){
+    //     anyV++; //정적변수의 형성
+    //     console.log(anyV);
+    //   }
+    //   return hoho();
+    // }
+    // let hihi = someD();
+    // hihi();  
+    // hihi();  
+    // hihi();  
+    // hihi();  
+
+    let box = document.querySelector(".userBox");
+    let toggleBtn = document.querySelector(".toggleBtn");
+
+    let toggle = (function(){ //자기실행 함수는 이름이 있어도 한번만 실행 된다.
+      let isShow = false;
+
+      return function(){
+        box.style.display = isShow ? "block" : "none";
+
+        isShow = !isShow;
+      };
+    })();
+
+    toggleBtn.addEventListener("click", toggle);
+
+
+  </script>
+</body>
+</html>

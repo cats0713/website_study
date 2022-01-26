@@ -1,0 +1,19 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title login
+    link(rel="stylesheet", href="../css/captcha.css")
+  body
+    .bigBox
+      label 
+        input(type="text" 
+          placeholder="ID 입력" tabindex="10" autofocus required autocomplete="off")#userID.userID
+      label   
+        input(type="password" placeholder="password 입력" tabindex="20" required autocomplete="off")#userPass.userPass
+      canvas(width="100" height="40" )#captVale
+      input(type="text" placeholder="캡챠인증" tabindex="30" required autocomplete="off")#userCC.userCC
+      button(tabindex="40")#userBtn LOGIN 
+    script(src="../js/captcha.js") 

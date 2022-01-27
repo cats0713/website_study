@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div id="nowDate"></div> -->
+  <script>
+    // const date1 = new Date('2022/01/03/00:00:00');
+    // const date2 = new Date('2021/12/26/00:00:00');
+    // const dateNow = Date.now();
+
+    // console.log((date1-date2)/86400000);
+
+    // (function main(){
+    //   let nowDate = document.querySelector("#nowDate");
+
+    //   const toDay = new Date();
+
+    //   const dayNames = ['(일요일)', '(월요일)', '(화요일)', '(수요일)', '(목요일)', '(금요일)', '(토요일)'];
+
+    //   const day = dayNames[toDay.getDay()]; //날을 가져와서 요일을 붙인다.
+
+    //   const year = toDay.getFullYear(); //현재시간 기준 연도를 반환
+    //   const month = toDay.getMonth() + 1; //달은 0~11이기 때문
+    //   const date = toDay.getDate();
+    //   let hour = toDay.getHours();
+    //   let minute = toDay.getMinutes();
+    //   let second = toDay.getSeconds();
+    //   const ampm = hour >= 12 ? "PM" : "AM";
+
+    //   hour %= 12;
+    //   hour = hour || 12;
+      
+    //   minute = minute < 10 ? "0" + minute : minute;
+    //   second = second < 10 ? "0" + second : second;
+
+    //   const now = `${year}년 ${month}월 ${date}일 ${day} ${hour}시 ${minute}분 ${second}초 ${ampm}`;
+
+    //   nowDate.innerHTML= now;
+
+    //   setTimeout(main, 1000)
+    // })();
+    const day = new Date(-1,1,1);
+    const nowday = new Date(); 
+    console.log(day);
+    console.log(day/84600000);
+    console.log(((nowday-day)/84600000)/365);
+
+  </script>
+</body>
+</html>

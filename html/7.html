@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .lv {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      float: left;
+      /* color: white; */
+
+    }
+
+    .lv::before {
+      content: 'abc';
+      background: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fdata.whicdn.com%2Fimages%2F332681736%2Foriginal.jpg&type=a340");
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 100;
+    }
+
+    .lv::after {
+      content: '';
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 200;
+    }
+
+    .lv:hover::after {
+      content: '';
+      background: rgba(0, 0, 0, 0);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 300;
+    }
+
+    .saleT::after {
+      content: "SALE";
+      color: white;
+      background-color: red;
+      border-radius: 3px;
+      font-size: 5px;
+      padding: 1px;
+    }
+
+    .lsA {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .lsA::after {
+      content: "";
+      width: 50px;
+      height: 5px;
+      display: inline-block;
+      background-color: violet;
+    }
+
+    .lsA::before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      display: inline-block;
+      background-color: violet;
+    }
+
+    .lsB {
+      display: inline-block;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .lsB::after {
+      content: "'";
+      display: inline-block;
+    }
+
+    .lsB::before {
+      content: "'";
+      display: inline-block;
+    }
+
+    .myGNB li {
+      list-style: none;
+      float: left;
+      margin-right: 5px;
+    }
+
+    .myGNB li::after {
+      content: "|";
+      padding-left: 5px;
+    }
+
+    .myGNB li:last-child::after {
+      content: "";
+    }
+
+    .myGNB::after {
+      clear: both;
+      /* flote 해제 */
+    }
+
+    span[data-descr]:hover::after {
+      content: attr(data-descr);
+      /* 임의의 값을 data-속성 을 지정하여 사용할수있다. */
+      min-width: 200px;
+      border: 1px #aaaaaa solid;
+      border-radius: 10px;
+      background-color: #ffffcc;
+      padding: 12px;
+      color: #000000;
+      font-size: 14px;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lv"></div>
+
+  <ul>
+    <li class="saleT">아메리카노 : 4000원</li>
+    <li>카푸치노 : 4000원</li>
+    <li class="saleT">라떼 : 4000원</li>
+    <li>아이스티 : 4000원</li>
+  </ul>
+
+  <div class="lsA">css is vary hard</div>
+  <div class="lsB">css is vary hard</div>
+
+  <ul class="myGNB">
+    <li><a href="#">login</a></li>
+    <li><a href="#">home</a></li>
+    <li><a href="#">sitemap</a></li>
+  </ul>
+
+
+  <p>아래의 코드를 참조하세요..<br />
+    여성 싱어 중 <span data-descr="자드는 일본의 대중가수이다.">자드</span> 를 소개합니다.
+    <span data-descr="자드 소개의 안내문이 보였지요?">툴팁</span>.<br />
+    이렇게 툴팁을 이용할 수 있습니다. <span data-descr="자드는 일본의 대중가수이다.">다시보세요!</span>.
+  </p>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>love</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -5rem;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 10rem;
+      border: 0.5rem solid cornflowerblue;
+      background-color: cornflowerblue;
+      border-radius: 0.2rem;
+      overflow: hidden;
+      box-shadow: 0.2rem 0.2rem 0.2rem gray;
+
+    }
+
+    p {
+      color: white;
+      font-size: 13rem;
+      white-space: nowrap;
+      margin-top: -1rem;
+      margin-left: 20rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>cats I LOVE YOU.</p>
+  </div>
+  <script>
+    let cIL = document.querySelector("p");
+    let i = 209;
+
+    let moveCIL = () => {
+      if (i > -900) {
+        i--;
+        cIL.style.marginLeft = `${i}px`;
+      }else{
+        reverseText(); 
+      }
+    }
+    let aa = () => {
+      i++;
+      cIL.style.marginLeft = `${i}px`;
+    }
+    let reverseText = () => {
+      setInterval("aa", 1); 
+      }
+
+      setInterval("moveCIL()", 1);
+
+  </script>
+</body>
+
+</html>

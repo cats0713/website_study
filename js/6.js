@@ -16,3 +16,4 @@ window.onload = function() {
   var img = document.querySelector("#scream");
   ctx.drawImage(img, 10, 10);
 };
+

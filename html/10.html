@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let myA =
+      [
+        [{
+          'zard': {
+            'english': [1, 2, 3, 4, 5],
+            'math': [6, 7, 8, 9, 99]
+          }
+        }],
+        [{
+          'kkm': {
+            'english': [1, 2, 3, 4, 5],
+            'math': [6, 7, 8, 9, 99]
+          }
+        }]
+      ];
+
+    myA.forEach(function (value, index, array) {
+      for (let j in myA[index]) {
+        let sumNum = 0;
+        for (let k in myA[index][j]) {
+          console.log(myA[index][j][k]);
+          for (let m in myA[index][j][k]) {
+            myA[index][j][k][m].forEach(function (v, i, a) {
+              sumNum += v;
+              console.log(`${k}의 ${m}: ${v} `);
+            });
+            console.log(`${k}의 ${m} 합계 :${sumNum}`);
+          }
+        }
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

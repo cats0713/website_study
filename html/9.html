@@ -54,6 +54,7 @@
   <p class="button" onclick="f(event)">버튼</p>
   <p class="button" onclick="f(event)">버튼</p>
 
+  <a id="target" href="./8.html"></a>  
   <script>
     let active = document.querySelector("#active"); //객체 자체를 잡아온것이기 때문에
     console.log(active.tagName); // id 대문자로 나온다.
@@ -96,7 +97,11 @@
     // listA[num].classList.add('circle');
   }
 
-
+  let target = document.querySelector("#target");
+  console.log('target.href=', target.href); // 해석된값 target.href= http://127.0.0.1:5501/html/8.html
+  console.log('target.getAttribute("href")=',target.getAttribute("href")); //그대로 나옴 ./8.html
+  target.href = "./7.html";
+  console.log('target.href=', target.href); 
 
   </script>
 </body>

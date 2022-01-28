@@ -48,11 +48,11 @@
   <input type="button" value="제거" onclick="AA.classList.remove('DD');">
   <input type="button" value="토글" onclick="AA.classList.toggle('AA');">
 
-  <p class="button" onclick="f(0)">버튼</p>
-  <p class="button" onclick="f(1)">버튼</p>
-  <p class="button" onclick="f(2)">버튼</p>
-  <p class="button" onclick="f(3)">버튼</p>
-  <p class="button" onclick="f(4)">버튼</p>
+  <p class="button" onclick="f(event)">버튼</p>
+  <p class="button" onclick="f(event)">버튼</p>
+  <p class="button" onclick="f(event)">버튼</p>
+  <p class="button" onclick="f(event)">버튼</p>
+  <p class="button" onclick="f(event)">버튼</p>
 
   <script>
     let active = document.querySelector("#active"); //객체 자체를 잡아온것이기 때문에
@@ -74,15 +74,26 @@
       }
     }
 
-  let f = (num) => {
+  let f = (event) => {
     let listA = document.querySelectorAll(".button");
-    let i = 0;
 
-    while(i < listA.length){
-      listA[i].classList.remove('circle');
-      i++;
-    }
-    listA[num].classList.add('circle');
+    //console.log(event.target.className);
+    //event.target.classList.toggle('circle');
+    listA.forEach(function(e,i,v) {
+      listA[i].classList.toggle('circle');
+    });
+
+
+
+    // listA.forEach(function(e,i,v) {
+    //   listA[i].classList.remove('circle');
+    // });
+
+    // while(i < listA.length){
+    //   listA[i].classList.remove('circle');
+    //   i++;
+    // }
+    // listA[num].classList.add('circle');
   }
 
 

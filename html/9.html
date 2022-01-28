@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid blue;
+        text-align: center;
+    }
+    .circle {
+        border-radius: 25px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li id="active">d</li>
+  </ul>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li class="AA BB CC">4</li>
+  </ul>
+
+  <input type="button" value="list" onclick="console.log(AA.classList);">
+  <input type="button" value="조회" onclick="loof();">
+  <input type="button" value="추가" onclick="AA.classList.add('DD');">
+  <!-- 쌍따움표느 쓰면 안됨 -->
+  <input type="button" value="제거" onclick="AA.classList.remove('DD');">
+  <input type="button" value="토글" onclick="AA.classList.toggle('AA');">
+
+  <p class="button" onclick="f(0)">버튼</p>
+  <p class="button" onclick="f(1)">버튼</p>
+  <p class="button" onclick="f(2)">버튼</p>
+  <p class="button" onclick="f(3)">버튼</p>
+  <p class="button" onclick="f(4)">버튼</p>
+
+  <script>
+    let active = document.querySelector("#active"); //객체 자체를 잡아온것이기 때문에
+    console.log(active.tagName); // id 대문자로 나온다.
+    console.log(active.id);
+    active.id = "redA"; //아이디 바꾸기
+    console.log(active.id);
+
+    active.className = "important CCC AB"; //띄어쓰기하면 클래스가 추가된다.
+    console.log(active.className);
+    active.className += " blueA"; //추가할때는 항상 띄어주기
+    console.log(active.className);
+
+    let AA = document.querySelector(".AA");
+
+    let loof = () => {
+      for (i = 0; i < AA.classList.length; i++) {
+        console.log(i, AA.classList[i]);
+      }
+    }
+
+  let f = (num) => {
+    let listA = document.querySelectorAll(".button");
+    let i = 0;
+
+    while(i < listA.length){
+      listA[i].classList.remove('circle');
+      i++;
+    }
+    listA[num].classList.add('circle');
+  }
+
+
+
+  </script>
+</body>
+
+</html>

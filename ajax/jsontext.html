@@ -15,6 +15,7 @@
   <div id="userText4"></div>
   <div id="demo"></div>
   <div id="userText5"></div>
+  <div id="userText6"></div>
   <script>
     // let myObj = {name: "John", age: 31, city: "New York"};
     // let myJson = JSON.stringify(myObj);
@@ -136,8 +137,8 @@
     };
 
     let userText5 = document.querySelector("#userText5");
-    for(i in myObj5){
-      switch(i){
+    for (i in myObj5) {
+      switch (i) {
         case 'name':
           userText5.innerHTML += myObj5[i];
           break;
@@ -146,12 +147,55 @@
           break;
         case 'cars':
           userText5.innerHTML += `${i}(${myObj5[i].length}set)<br>`;
-          myObj5[i].forEach((e4,k5,v5) => {
-            userText5.innerHTML += `${k5+1}. ${e4}<br>`; 
-          }); 
+          myObj5[i].forEach((e4, k5, v5) => {
+            userText5.innerHTML += `${k5 + 1}. ${e4}<br>`;
+          });
           break;
       }
     }
+
+    let userText6 = document.querySelector("#userText6");
+    myObj6 = {
+      "name": "John",
+      "age": 30,
+      "cars": [
+        { "name": "Ford", "models": ["Fiesta", "Focus", "Mustang"] },
+        { "name": "BMW", "models": ["320", "X3", "X5"] },
+        { "name": "Fiat", "models": ["500", "Panda"] }
+      ]
+    }
+
+    for (i in myObj6) {
+      switch (i) {
+        case 'name':
+          userText6.innerHTML += myObj6[i];
+          break;
+        case 'age':
+          userText6.innerHTML += `(${myObj6[i]})<br>`;
+          break;
+        case 'cars':
+          userText6.innerHTML += `${i}(${myObj6[i].length}set)<br>`;
+          myObj6[i].forEach((e6, k6, v6) => {
+            userText6.innerHTML += `${k6 + 1}.`;
+            for (j in e6) {
+              switch (j) {
+                case 'name':
+                  userText6.innerHTML += `${e6[j]}`;
+                  break;
+                case 'models':
+                  userText6.innerHTML += `(${e6[j].length}) : `;
+                  e6[j].forEach((e7, k7, v7) => {
+                    userText6.innerHTML += ` ${k6+1} - ${k7+1} ${e7} `;
+                  });
+                  userText6.innerHTML += '<br>';
+                  break;
+              }
+            }
+          });
+          break;
+      }
+    }
+
   </script>
 </body>
 

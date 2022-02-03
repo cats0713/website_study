@@ -13,6 +13,8 @@
   <div id="userText2"></div>
   <div id="userText3"></div>
   <div id="userText4"></div>
+  <div id="demo"></div>
+  <div id="userText5"></div>
   <script>
     // let myObj = {name: "John", age: 31, city: "New York"};
     // let myJson = JSON.stringify(myObj);
@@ -91,8 +93,8 @@
       ]
     }
     let userText4 = document.querySelector("#userText4");
-    for(let person in userJson4){
-      switch (person){
+    for (let person in userJson4) {
+      switch (person) {
         case 'name':
           userText4.innerHTML += userJson4[person];
           break;
@@ -101,20 +103,53 @@
           break;
         case 'pets':
           userText4.innerHTML += `${person}<br>`;
-          userJson4[person].forEach(function (e4,k4,v4) {
-            for(let petsValue in e4){
-              switch(petsValue){
+          userJson4[person].forEach(function (e4, k4, v4) {
+            for (let petsValue in e4) {
+              switch (petsValue) {
                 case 'animal':
                   userText4.innerHTML += `${e4[petsValue]} `;
-                break;
+                  break;
                 case 'name':
                   userText4.innerHTML += `(${e4[petsValue]})<br>`;
-                break;
+                  break;
               }
 
             }
           });
-        break;
+          break;
+      }
+    }
+
+    let userJsonText = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    let obj = JSON.parse(userJsonText);
+    obj.birth = new Date(obj.birth);
+    // document.querySelector("#demo").innerHTML = `${obj.name}의 생일 ${obj.birth}`;
+
+    var obj2 = { name: "John", today: new Date(), city: "New York" };
+    var myJSON2 = JSON.stringify(obj2);
+    document.getElementById("demo").innerHTML = myJSON2;
+
+    let myObj5 = {
+      "name": "John",
+      "age": 30,
+      "cars": ["Ford", "BMW", "Fiat"]
+    };
+
+    let userText5 = document.querySelector("#userText5");
+    for(i in myObj5){
+      switch(i){
+        case 'name':
+          userText5.innerHTML += myObj5[i];
+          break;
+        case 'age':
+          userText5.innerHTML += `(${myObj5[i]})<br>`;
+          break;
+        case 'cars':
+          userText5.innerHTML += `${i}(${myObj5[i].length}set)<br>`;
+          myObj5[i].forEach((e4,k5,v5) => {
+            userText5.innerHTML += `${k5+1}. ${e4}<br>`; 
+          }); 
+          break;
       }
     }
   </script>

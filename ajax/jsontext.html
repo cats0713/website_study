@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="userText"></div>
+  <div id="userText2"></div>
+  <div id="userText3"></div>
+  <div id="userText4"></div>
+  <script>
+    // let myObj = {name: "John", age: 31, city: "New York"};
+    // let myJson = JSON.stringify(myObj);
+    // window.location = "user_json.php?user=" + myJson;
+
+    // let myJSON = '{"name":"hoho", "age":31, "city":"New York"}';
+    // let mytoJSON = JSON.parse(myJSON);
+    // window.location = "user_json.php?user=" + mytoJSON.age;
+
+    let userJson = {
+      "employee": { "name": "John", "age": 30, "city": "New York" },
+      "employe": { "name": "John", "age": 30, "city": "New York" },
+      "employ": { "name": "John", "age": 30, "city": "New York" },
+    }
+    let userText = document.querySelector("#userText");
+
+    for (let i in userJson) {
+      userText.innerHTML += `${i} : `;
+      for (let j in userJson[i]) {
+
+        switch (j) {
+          case 'age':
+            userText.innerHTML += `(${userJson[i][j]}) `;
+            break;
+          default: userText.innerHTML += `${userJson[i][j]} `;
+            break;
+        }
+        // if( j == "age" ){
+        //   userText.innerHTML +=(`(${userJson[i][j]}) `);
+
+        // }else{
+        //   userText.innerHTML +=(`${userJson[i][j]} `);
+        // }
+      }
+      userText.innerHTML += `<br>`;
+    }
+
+    let userJson2 = {
+      "emp": ['john', 'anna', 'peter']
+    }
+
+    let userText2 = document.querySelector("#userText2");
+    for (let i in userJson2) {
+      userText2.innerHTML += i + '<br>';
+      userJson2[i].forEach(function (e, k, v) {
+        userText2.innerHTML += `${k + 1}. ${e} <br>`;
+      });
+    }
+
+    let userJson3 = {
+      "emploees": [
+        { "John": "ansan" }, { "anna": "suwon" }, { "peter": "seoul" }
+      ],
+      "emploee": [
+        { "John": "ansan" }, { "anna": "suwon" }, { "peter": "seoul" }, { "boo": "suwon" }
+      ]
+    }
+    let userText3 = document.querySelector("#userText3");
+    for (let i in userJson3) {
+      userText3.innerHTML += `${i} - `;
+      userJson3[i].forEach(function (e2, k2, v2) {
+        for (let j in userJson3[i][k2]) {
+          userText3.innerHTML += `${k2 + 1}. ${j} (${userJson3[i][k2][j]}) `;
+        }
+      });
+      userText3.innerHTML += `<br>`;
+    }
+
+    let userJson4 = {
+      "name": "John",
+      "age": 31,
+      "pets": [
+        { "animal": "dog", "name": "Fido" },
+        { "animal": "cat", "name": "Felix" },
+        { "animal": "hamster", "name": "Lightning" }
+      ]
+    }
+    let userText4 = document.querySelector("#userText4");
+    for(let person in userJson4){
+      switch (person){
+        case 'name':
+          userText4.innerHTML += userJson4[person];
+          break;
+        case 'age':
+          userText4.innerHTML += `(${userJson4[person]})<br>`;
+          break;
+        case 'pets':
+          userText4.innerHTML += `${person}<br>`;
+          userJson4[person].forEach(function (e4,k4,v4) {
+            for(let petsValue in e4){
+              switch(petsValue){
+                case 'animal':
+                  userText4.innerHTML += `${e4[petsValue]} `;
+                break;
+                case 'name':
+                  userText4.innerHTML += `(${e4[petsValue]})<br>`;
+                break;
+              }
+
+            }
+          });
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+    <h2>The XMLHttpRequest Object</h2>
+    <button type="button" onclick="loadDoc()">Change Content</button>
+
+    <script>
+      let  loadDoc = () => {
+        let xhttp = new XMLHttpRequest(); //객체 생성
+        xhttp.onreadystatechange = function(){ //onready 반응이 있으면 함수를 실행해 3실행
+          if(this.readyState == 4 && this.status == 200){ //에러가 없음을 보증하는 코드 4,200
+            document.querySelector("#demo").innerHTML = tihs.responseText; //응답한 파일을 출력하기
+          }
+        };
+        xhttp.open("GET", "text.txt?t=" + Math.random(), true); 
+        //    post,get | 파일경로(캐쉬 사용을 막기위해 쿼리값을 조정한다.) | 비동기 여부 
+        //get 으로 가져와 , 파일명, true(비동기 여부,무조건 true 쓴다) 1실행
+        xhttp.send(); //2실행
+      }
+    </script>
+</body>
+</html>

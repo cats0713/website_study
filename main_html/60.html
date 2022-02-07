@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+
+      /* Set "my-sec-counter" to 0 */
+      counter-reset: my-sec-counter;
+      counter-reset: section1;
+    }
+
+    .text1 h2::before {
+      /* Increment "my-sec-counter" by 1 */
+      counter-increment: my-sec-counter;
+      content: "Section "counter(my-sec-counter) ". ";
+    }
+    .text2 h1 {
+      counter-reset: subsection;
+    }
+    .text2 h1::before {
+      counter-increment: section1;
+      content: "Num "counter(section1)". ";
+    }
+
+    .text2 h2::before {
+      counter-increment: subsection;
+      content: counter(section1) "."counter(subsection) " ";
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text1">
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Bootstrap Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>PHP Tutorial</h2>
+  </div>
+
+  <div class="text2">
+    <h1>HTML and CSS</h1>
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>Bootstrap Tutorial</h2>
+    <hr>
+
+    <h1>JavaScript</h1>
+    <h2>JavaScript Tutorial</h2>
+    <h2>jQuery Tutorial</h2>
+    <h2>JSON Tutorial</h2>
+    <hr>
+
+    <h1>Server Side</h1>
+    <h2>SQL Tutorial</h2>
+    <h2>PHP Tutorial</h2>
+  </div>
+
+</body>
+
+</html>

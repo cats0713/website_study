@@ -59,11 +59,70 @@ window.onload = () => {
 
   console.log(userB.firstElem);
 
+  class Foo2 {
+    constructor(prop){
+      this.prop = prop;
+    }
+    static staticM(){
+      return 'we';
+    }
+    proptoype(){
+      return this.prop;
+    }
+  }
+
+  console.log(Foo2.staticM());
+  
+  let foo2 = new Foo2(123);
+  
+  //console.log(foo2.staticM());
 
 
+  class Circle{
+    constructor(radius){
+      this.radius = radius;
+    }
 
+    getDiameter(){
+      return 2* this.radius;
+    }
 
+    getPerimeter(){
+      return 2 * Math.PI * this.radius;
+    }
+    getArea(){
+      return Math.PI * Math.pow(this.radius);
+    }
+  }
 
+  class Cylinder extends Circle{
+    constructor( radius , heigth ){
+      super(radius);
+      this.heigth;
+    }
+
+    getArea(){ //overriding
+      return (this.heigth * super.getPerimeter()) + (2 * super.getArea());
+    }
+    getVolume(){
+      return super.getArea() * this.heigth;
+    }
+  }
+
+  const cylinder = new Cylinder(2, 10);
+
+  console.log(cylinder.getDiameter());  // 4
+  // 원의 둘레
+  console.log(cylinder.getPerimeter()); // 12.566370614359172
+  // 원통의 넓이
+  console.log(cylinder.getArea());      // 150.79644737231007
+  // 원통의 부피
+  console.log(cylinder.getVolume());    // 125.66370614359172
+
+  // cylinder는 Cylinder 클래스의 인스턴스이다.
+  console.log(cylinder instanceof Cylinder); // true
+  // cylinder는 Circle 클래스의 인스턴스이다.
+  console.log(cylinder instanceof Circle);   // true
 
 
 

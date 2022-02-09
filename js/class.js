@@ -96,8 +96,8 @@ window.onload = () => {
   }
 
   class Cylinder extends Circle{
-    constructor( radius , heigth ){
-      super(radius);
+    constructor( aa, heigth ){
+      super(aa);
       this.heigth;
     }
 
@@ -125,9 +125,20 @@ window.onload = () => {
   console.log(cylinder instanceof Circle);   // true
 
 
+  class perent {
+    constructor(){}
+  }
 
-
-
-
+  class Child extends perent{
+    constructor(aaa){
+      super();
+      this.aaa = aaa;
+    }
+    get  preintValue(){
+      return this.aaa;
+    }
+  }
+  const child = new Child(123);
+  console.log(child.preintValue);
 }
 

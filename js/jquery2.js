@@ -17,6 +17,9 @@ window.onload=()=>{
     // $("#navga li").removeClass('s');
     // $(this).addClass("s");
     $(this).toggleClass("s");
+
+    
+
   });
 
 

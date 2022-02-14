@@ -49,9 +49,5 @@ int main (){
   printf("%d %d",arr3[1],arr3[3]);
 
 
-
-
-
-
   return 0;
 }

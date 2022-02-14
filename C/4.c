@@ -4,7 +4,7 @@
 int main(){
 	char ch1 = 'A', ch = 65;
 	int ch3 = 'Z', ch4 = 90;
-	long = aaa = 1234534;
+	long aaa = 1234534;
 
 	printf("aaa = %c\n", aaa);
 	printf("int size : %d\n", sizeof(7));

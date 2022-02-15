@@ -50,7 +50,9 @@
         echo "<span>".$current_row['name']."</span>";
         echo "<span>".$current_row['mobile']."</span>";
         echo "<span>".$current_row['address']."</span>";
-        echo "<span>[삭제]</span>";
+        echo "<span>".$current_row['no']."</span>";
+        echo '<span><a href="./main.php?menu=delList&item='.$current_row['no'].'">[삭제]</a></span>';
+        echo '<span><a href="./main.php?menu=updateList&item='.$current_row['no'].'">[수정]</a></span>';
         echo "</div>";
         $recCounter++;
       }
@@ -75,8 +77,19 @@
       require "./include/db_open.inc"; //db_open
       mysqli_query($db_conn,$myQuery);
       mysqli_close($db_conn);
-      echo '<script>location.href="./main.php";</script>';
+      echo '<script>location.href="./main.php";</script>'; //main으로 돌아가기
+    }else if($_GET['menu'] == "delList"){
+      $recorNo = $_GET['item'];
+      $myQuery = "delete from `telList` where `no`=".$recorNo;
+      require "./include/db_open.inc";
+      mysqli_query($db_conn,$myQuery);
+      mysqli_close($db_conn);
+      echo '<script>location.href="./main.php";</script>'; 
+    }else if($_GET['menu'] == "updateList"){
+      $recorNo = $_GET['item']; 
+      //$myQuery = "update `telList` set `name` =" 
     }
+
 
   ?>
 </body>

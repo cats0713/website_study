@@ -1,7 +1,9 @@
 <?
   require "./sub/topArea.html";
 
-  echo "ok";
+  function readAllData(){
+    require "./inc/db.inc";
+  }
 
 
 

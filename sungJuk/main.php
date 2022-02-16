@@ -1,11 +1,9 @@
 <?
   require "./sub/topArea.html";
+  require "./inc/db.inc";
+  require "./subphp/func.php";
 
-  function readAllData(){
-    require "./inc/db.inc";
-  }
-
-
-
+  connectDB($serverName,$serverId,$serverPw,$serverDB);
+  
   require "./sub/bottomArea.html";
 ?>

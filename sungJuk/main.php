@@ -3,7 +3,7 @@
   require "./inc/db.inc";
   require "./subphp/func.php";
 
-  connectDB($serverName,$serverId,$serverPw,$serverDB);
-  
+  $conn = connectDB($serverName,$serverId,$serverPw,$serverDB);
+
   require "./sub/bottomArea.html";
 ?>

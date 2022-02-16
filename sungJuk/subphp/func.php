@@ -10,6 +10,6 @@
       echo "DB선택 실패";
       exit;
     }
+    return $db_conn;
   }
-
 ?>

@@ -26,6 +26,7 @@
       echo "<li><input type='text' name='height' value='".$row['height']."'></li> "; 
       echo "<li><input type='text' name='weight' value='".$row['weight']."'></li> "; 
       echo "<li><input type='text' name='blood' value='".$row['blood']."'></li> ";
+      echo "<li><input type='hidden' name='no' value='".$row['no']."'></li> ";
       echo "<li><input type='hidden' name='menu' value='modify'></li> ";
       echo "<li><input type='submit' value='제출'></li> "; 
     }

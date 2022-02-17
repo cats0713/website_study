@@ -11,7 +11,7 @@
     echo "자료없음";
     exit;
   }
-  echo "<section class="dataList">";
+  echo "<section class='dataList'>";
   echo "<article>";
   echo "<ol>";
   while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술

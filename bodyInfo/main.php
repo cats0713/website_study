@@ -25,29 +25,36 @@
       echo "<li><input type='text' name='gender' value='".$row['gender']."'></li> "; 
       echo "<li><input type='text' name='height' value='".$row['height']."'></li> "; 
       echo "<li><input type='text' name='weight' value='".$row['weight']."'></li> "; 
-      echo "<li><input type='text' name='blood' value='".$row['blood']."'></li> "; 
-      echo "<li><input type='submit' name='submit' value='제출'></li> "; 
+      echo "<li><input type='text' name='blood' value='".$row['blood']."'></li> ";
+      echo "<li><input type='hidden' name='menu' value='modify'></li> ";
+      echo "<li><input type='submit' value='제출'></li> "; 
     }
     echo "</ol>";
     echo "</article>";
     echo "</form>";
     echo "</section>";
 
-
-
-
-
-
     mysqli_free_result($rows);
     mysqli_close($db_handle);
   
     require "./sub/footer.html";
-  }else{
+  }else if($menu == 'modify'){ //수정버튼을 눌렀을 때
+
+    $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
+    $sqlQuery = "update `bodyInfo` set `name`='".$_GET['name']."', `gender`='".$_GET['gender']."', `height`='".$_GET['height']."', `weight`='".$_GET['weight']."', `blood`='".$_GET['blood']."' where `no`='".$_GET['no']."'";
+    mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
+    $rows = mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
+    mysqli_free_result($rows);
+    mysqli_close($db_handle);
+
+    echo "<script>location.herf='./main.php'</script>";
+
+  }else{ //처음 화면, 메인 화면
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
 
     $sqlQuery = "select * from `bodyInfo`"; //쿼리 명령문
     $rows = mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
-    if(mysqli_num_rows($rows)==0){ //자료없음
+    if(mysqli_num_rows($rows) == 0){ //자료없음
       echo "자료없음";
       exit;
     }

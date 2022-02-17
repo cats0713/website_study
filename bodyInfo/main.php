@@ -12,7 +12,7 @@
     exit;
   }
   while($row = mysqli_fetch_assoc($rows)){
-    echo $row['no']," ".$row['name']."".$row['gender']." ".$row['height']." ".$row['weight']." ".$row['blood'];
+    echo $row['no']," ".$row['name']."".$row['gender']." ".$row['height']." ".$row['weight']." ".$row['blood']."<br>";
   }
 
 

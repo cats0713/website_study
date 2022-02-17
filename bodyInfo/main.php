@@ -16,21 +16,28 @@
       exit;
     }
 
-
     echo "<section class='dataList'>";
     echo "<article>";
     echo "<ol>";
     while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
-      echo "<li>".$row['name']." ";
-      echo $row['gender']." ";
-      echo $row['height']." ";
-      echo $row['weight']." ";
-      echo $row['blood']." ";
+      echo "<li><input type='text' name='name' value='".$row['name']."'></li> ";
+      echo "<li><input type='text' name='name' value='".$row['gender']."'></li> "; 
+      echo "<li><input type='text' name='name' value='".$row['height']."'></li> "; 
+      echo "<li><input type='text' name='name' value='".$row['weight']."'></li> "; 
+      echo "<li><input type='text' name='name' value='".$row['blood']."'></li> "; 
       echo "<a href='main.php?menu=update&no=".$row['no']."'>수정</a>.</li><br>";
     }
     echo "</ol>";
     echo "</article>";
     echo "</section>";
+
+    echo "<input >";
+
+
+
+
+
+
     mysqli_free_result($rows);
     mysqli_close($db_handle);
   

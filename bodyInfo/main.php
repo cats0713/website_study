@@ -16,16 +16,18 @@
       exit;
     }
 
-    echo "<section style='float:left'>";
+    echo "<section>";
     echo "<article>";
     echo "<ol>";
-    echo '<form action="./main.php" method="get">';
-    echo "<li><input type='text' name='name' value='".$row['name']."'></li> ";
-    echo "<li><input type='text' name='gender' value='".$row['gender']."'></li> "; 
-    echo "<li><input type='text' name='height' value='".$row['height']."'></li> "; 
-    echo "<li><input type='text' name='weight' value='".$row['weight']."'></li> "; 
-    echo "<li><input type='text' name='blood' value='".$row['blood']."'></li> "; 
-    echo "<li><input type='submit' name='submit' value='제출'></li> "; 
+    while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
+      echo '<form action="./main.php" method="get">';
+      echo "<li><input type='text' name='name' value='".$row['name']."'></li> ";
+      echo "<li><input type='text' name='gender' value='".$row['gender']."'></li> "; 
+      echo "<li><input type='text' name='height' value='".$row['height']."'></li> "; 
+      echo "<li><input type='text' name='weight' value='".$row['weight']."'></li> "; 
+      echo "<li><input type='text' name='blood' value='".$row['blood']."'></li> "; 
+      echo "<li><input type='submit' name='submit' value='제출'></li> "; 
+    }
     echo "</ol>";
     echo "</article>";
     echo "</form>";

@@ -15,13 +15,13 @@
   while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
     echo "<article>";
     echo "<ol>";
-    echo "<li>".$row['no']."</li>";
-    echo "<li>".$row['name']."</li>";
-    echo "<li>".$row['gender']."</li>";
-    echo "<li>".$row['height']."</li>";
-    echo "<li>".$row['weight']."</li>";
-    echo "<li>".$row['blood']."</li>";
-    echo "<a href='./main.php?menu=updateList&'".$row['no'].'">[수정]</a><br>";
+    echo $row['no']."</li>";
+    echo $row['name'];
+    echo $row['gender'];
+    echo $row['height'];
+    echo $row['weight'];
+    echo $row['blood']."</li>";
+    //echo "<a href='./main.php?menu=updateList&item=".$row['no']."'>[수정]</a><br>";
     echo "</ol>";
     echo "</article>";
   }

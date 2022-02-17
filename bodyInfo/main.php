@@ -35,7 +35,7 @@
     mysqli_close($db_handle);
   
     require "./sub/footer.html";
-  }eles{
+  }else{
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
 
     $sqlQuery = "select * from `bodyInfo`"; //쿼리 명령문

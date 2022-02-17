@@ -42,7 +42,7 @@
   }else if($menu == 'modify'){ //수정버튼을 눌렀을 때
 
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
-    $sqlQuery = "update `bodyInfo` set `name`='".$_GET['name']."', `gender`='".$_GET['gender']."', `height`='".$_GET['height']."', `weight`='".$_GET['weight']."', `blood`='".$_GET['blood']."' where `no`='".$_GET['no']."'";
+    $sqlQuery = "update `bodyInfo` set `name`='".$_GET['name']."', `gender`='".$_GET['gender']."', `height`='".$_GET['height']."', `weight`='".$_GET['weight']."', `blood`='".$_GET['blood']."' where `no`=".$_GET['no'];
     echo $sqlQuery;
     mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
     $rows = mysqli_query($db_handle,$sqlQuery); //쿼리 날리기

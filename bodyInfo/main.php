@@ -44,11 +44,9 @@
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
     $sqlQuery = "update `bodyInfo` set `name`='".$_GET['name']."', `gender`='".$_GET['gender']."', `height`='".$_GET['height']."', `weight`='".$_GET['weight']."', `blood`='".$_GET['blood']."' where `no`=".$_GET['no'];
     echo $sqlQuery;
-    $rows = mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
-    mysqli_free_result($rows);
+    mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
     mysqli_close($db_handle);
-
-    echo "<script>location.herf='./main.php'</script>";
+    echo "<script>location.href='./main.php'</script>";
 
   }else{ //처음 화면, 메인 화면
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);

@@ -9,7 +9,7 @@
   if($menu == 'update'){
     $db_handle = DB_CONNECTFUNC($server, $db_id, $db_pw, $db_name);
 
-    $sqlQuery = "select * from `bodyInfo` where no=".$_GET['no']""; //쿼리 명령문
+    $sqlQuery = "select * from `bodyInfo` where no=".$_GET['no']; //쿼리 명령문
     $rows = mysqli_query($db_handle,$sqlQuery); //쿼리 날리기
     if(mysqli_num_rows($rows)==0){ //자료없음
       echo "자료없음";

@@ -4,6 +4,7 @@
   require "./subphp/func.php";
 
   $conn = connectDB($serverName,$serverId,$serverPw,$serverDB);
+  
 
   require "./sub/bottomArea.html";
 ?>

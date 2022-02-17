@@ -6,7 +6,7 @@
       echo "DB 로그인 실패";
       exit;
     }
-    if(!mysqli_select_db(db_handle,$db_name)){
+    if(!mysqli_select_db($db_handle,$db_name)){
       echo "DB 이상";
       exit; 
     }

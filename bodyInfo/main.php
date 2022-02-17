@@ -11,6 +11,9 @@
     echo "자료없음";
     exit;
   }
+  while($row = mysqli_fetch_assoc($rows)){
+    echo $row['no']," ".$row['name']."".$row['gender']." ".$row['height']." ".$row['weight']." ".$row['blood'];
+  }
 
 
   require "./sub/footer.html";

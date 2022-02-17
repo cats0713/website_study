@@ -11,13 +11,11 @@
     echo "자료없음";
     exit;
   }
-  echo "<section>";
+  echo "<section class="dataList">";
   echo "<article>";
   echo "<ol>";
   while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
-
-    echo "<li>".$row['no'];
-    echo $row['name'];
+    echo "<li>".$row['name'];
     echo $row['gender'];
     echo $row['height'];
     echo $row['weight'];

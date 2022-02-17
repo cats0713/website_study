@@ -15,7 +15,7 @@
   while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
     echo "<article>";
     echo "<ol>";
-    echo $row['no']."</li>";
+    echo "<li>".$row['no'];
     echo $row['name'];
     echo $row['gender'];
     echo $row['height'];

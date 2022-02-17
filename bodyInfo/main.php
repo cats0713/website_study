@@ -13,7 +13,7 @@
   }
   while($row = mysqli_fetch_assoc($rows)){ //반복하여 문서에 기술
     echo $row['no']," ".$row['name']." ".$row['gender']." ".$row['height']." ".$row['weight']." ".$row['blood'];
-    echo "<a href="./main.php"></a><br>";
+    //echo "<a href="./main.php"></a><br>";
   }
   mysqli_free_result($rows);
   mysqli_close($db_handle);

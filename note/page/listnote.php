@@ -4,7 +4,7 @@
     require "../inc/db_info.inc";
     require "../prg/db_connect.php";
 
-    $db_query = "select * from `note` where `name`='".$search."'";
+    $db_query = "select * from `note` where `name`='".$search."%'";
     $records = mysqli_query($db_handler,$db_query);
     
     if(mysqli_num_rows($records) == 0){

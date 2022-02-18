@@ -1,6 +1,5 @@
 <?
-
-  $db_handler = db_connet ($server, $db_id, $db_pw, $db_name);
+  $db_handler = mysqli_connect($server, $db_id, $db_pw, $db_name);
   if(!@$db_handler){
     echo "DB 로그인 실패";
     exit;

@@ -1,6 +1,6 @@
 <?
   require "../inc/db_info.inc";
-  require "../prg/db_connect";
+  require "../prg/db_connect.php";
 
 
   $db_query = "select * from `note`";

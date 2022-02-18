@@ -1,11 +1,10 @@
 <?
-  require "../inc/db_info.inc";
-  require "../prg/db_connect.php";
-
   $search = @$_GET['search'];
   if($search){
     echo $search;
   }else{
+    require "../inc/db_info.inc";
+    require "../prg/db_connect.php";
     $db_query = "select * from `note`";
     $records = mysqli_query($db_handler,$db_query);
     $counter = 1;

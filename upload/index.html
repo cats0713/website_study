@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>file upload</title>
+</head>
+<body>
+  <form action="./uploadfile.php" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="MAX_FILE_SIZE" value="99999999"> -->
+    <!-- 서버의 설정값을 자동으로 따라간다 -->
+    <label>File-1 <input type="file" name="file1"></label>
+    <label>File-2 <input type="file" name="file2"></label>
+    <input type="submit" value="파일전송">
+  </form>
+
+</body>
+</html>

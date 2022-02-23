@@ -11,12 +11,13 @@
   echo 'this','is','apple';
 
   $num = 'a';
-  
+
   echo <<<END
   이건 머야 $num 뭔지 모르겠네
   라ㅣ넝라ㅓ"fdsdfsf"아러ㅣㅏㄴㅇㄹ
   END;
 
+  print()
 
 
 ?>

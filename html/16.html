@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>버튼을 클릭하면 이벤트 전파를 중단 <button>버튼</button></p>  
+
+  <script>
+    const body = document.querySelector('body');
+    const para = document.querySelector('p');
+    const button = document.querySelector('button');
+
+    body.addEventListener('click',function(){
+      console.log("body");
+    });
+
+    para.addEventListener('click',function(){
+      console.log("para");
+    });
+
+    button.addEventListener('click',function(e){
+      console.log("button");
+
+      e.stopPropagation();
+    });
+
+
+  </script>
+</body>
+</html>

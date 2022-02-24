@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <body>
+  <p>time : <span id="time"></span></p>
+  <input type="button" id="execute" value="execute"/>
+ 
+  <script>
+    $('#execute').on('click',function(){
+      $.ajax({
+        url:'./time3.php',
+        dataType:'json',
+        success:function(data){
+          let str = '';
+          for(let i in data){
+            str += `<li>${data[i]}</li>`; 
+          }
+          $('#time').html(`<ul>${str}</ul>`);
+        }
+      })
+    })
+
+
+  </script>
+</body>
+</html>

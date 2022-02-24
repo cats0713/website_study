@@ -33,7 +33,20 @@
   echo preg_replace($pattern,$repla,$str2);
 
   $string = 'The quick brown fox jumped over the lazy dog.';
-  $patterns = ['/au/']
+  $patterns = array();
+  $patterns[0] = '/quick/';
+  $patterns[1] = '/brown/';
+  $patterns[2] = '/fox/';
+  $replacements = array();
+  $replacements[2] = 'bear';
+  $replacements[1] = 'black';
+  $replacements[0] = 'slow';
+  echo preg_replace($patterns, $replacements, $string);
 
-
+  $pattern1 = array(
+    '/(19|20)(\d{2})-(\d{1,2})-(\d{1,2})/','/^\s*{(\w)}\s*=/'
+  );
+  $replace = array('\3/\4/\1\2','$\1 =');
+  $text2 = '{dddd} = 1999-5-27';
+  echo preg_replace($pattern1,$replace,$text2);
 ?>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+  <p>time : <span id="time"></span></p>
+  <form>
+    <select name="timezone">
+      <option value="Asia/Seoul">서울</option>
+      <option value="America/New_York">미국</option>
+    </select>
+    <select name="format">
+      <option value="Y-m-d H:i:s">시간</option>
+      <option value="Y-m-d">날짜</option>
+    </select>
+  </form>
+  <input type="button" id="execute" value="execute"/>
+  <script>
+    $('#execute').on('click',function(){
+      $.ajax({
+        url:'./time2.php',
+        type:'post',
+        data: $('form').serialize(),
+        success:function(data){
+          $("#time").text(data);
+        }
+      })
+    })
+
+
+  </script>
+</body>
+</html>

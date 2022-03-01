@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
+  <title>로그인 해보기</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <header></header>
+  <form class="loginBox" action="./main.php" method="post">
+    <label>
+      ID <input type="text" id="inputID" name="userId" required autofocus tabindex="10" maxlength="10">
+    </label>
+    <label>
+      PW <input type="password" id="inputPW" name="userPw" required tabindex="20">
+    </label>
+    <canvas id="cptArea" width="200px" height="50px"></canvas>
+    <label>
+      보안 <input id="ranNum" type="text" name="capcha" required tabindex="30" autocomplete="off" > 
+    </label>
+    <input id="inputSubmit" type="submit" name="login" value="로그인" disabled>
+  </form>
+  <footer></footer>
+
+
+
+  <script>
+    const cptArea = document.querySelector("#cptArea");
+    const ctx = cptArea.getContext("2d");
+    ctx.font = "30px Comic Sans MS";
+    ctx.fillStyle = "black";
+    ctx.textAlign = "center";
+    let randomNum = Math.floor(Math.random()* 9000) + 1000;
+    ctx.fillText(randomNum, cptArea.width/2, cptArea.height/1.5);
+
+    const ranNum = document.querySelector("#ranNum");
+
+    let completeblank = e => {
+      const inputID = document.querySelector("#inputID").value;
+      const inputPW = document.querySelector("#inputPW").value;
+      const inputSubmit = document.querySelector("#inputSubmit");
+
+      if( inputID && inputPW && randomNum == e.target.value){
+        inputSubmit.removeAttribute("disabled");
+      }else{
+
+      }
+    }
+    ranNum.addEventListener("keyup",completeblank);
+    
+  </script>
+</body>
+</html>

@@ -1,8 +1,8 @@
-const http = require('http');
-
-http.createServer((req,res)=>{
-  res.writeHead(200,{ 'Content-Type': 'text/plain' });
-  res.end(`hello`);
-}).listen(2000,'127.0.0.1',() => {
-  console.log(`server live`);
+let ws = require("express");
+let app = ws(); //무조건 실행하고 받아서 쓴다.
+app.get('/',(req,res)=>{
+  res.send(`hello ${app}`);
+});
+app.listen(2000,function(){
+  console.log("open server");
 });

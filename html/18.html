@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex study</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      flex-flow: row wrap;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .header{
+      display: flex;
+      order: 10;
+      position: relative;
+      width: 100%;
+      justify-content: flex-end;
+    }
+    .header h1{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12.5%;
+      height: 142px;
+      background-color: red;
+    }
+    .header nav{
+      width: 87.5%;
+      min-height: 80px;
+      background-color: wheat;
+    }
+    .sS{
+      order: 20;
+      width: 50%;
+      background-color: blue;
+    }
+    .gS{
+      order: 30;
+      width: 27.09%;
+      height: 440px;
+      background-color: black;
+    }
+    .rS{
+      order: 40;
+      width: 22.9%;
+      background-color: blueviolet;
+    }
+    .lS{
+      order: 50;
+      width: 30%;
+      background-color: azure;
+    }
+    .pS{
+      order: 60;
+      width: 30%;
+      background-color: darkgreen;
+    }
+    .bS{
+      display: flex;
+      flex-flow: column nowrap;
+      order: 70;
+      width: 22.9%;
+    }
+    .bS div{
+      flex: 1 1 0;
+    }
+    .bS div:first-child{
+      background-color: brown;
+    }
+    .bS div:last-child{
+      background-color: palevioletred;
+    }
+    .soS{
+      order: 80;
+      width: 17.1%;
+      height: 270px;
+      background-color: pink;
+    }
+    footer{
+      order: 90;
+      width: 100%;
+      height: 94px;
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrap">
+    <header class="header">
+      <h1></h1>
+      <nav></nav>
+    </header>
+    <section class="sS"></section>
+    <section class="gS"></section>
+    <section class="rS"></section>
+  </div>
+
+  <div id="wrap">
+    <section class="lS"></section>
+    <section class="pS"></section>
+    <section class="bS">
+      <div class="banner1"></div>
+      <div class="banner2"></div>
+    </section>
+    <section class="soS"></section>
+  </div>
+
+  <div id="wrap">
+    <footer class="footer"></footer>
+  </div>
+</body>
+
+</html>

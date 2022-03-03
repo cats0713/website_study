@@ -6,7 +6,7 @@ userApp.use(myExpress.static('myFiles')); //루트의 위치를 설정 한다.
 userApp.get('/',(req,res) => {
   //res.send('hello home');
   // res.send('hello'); //res.send는 두번 못쓴다
-  res.sendFile(path.join(__dirname,'myFiles','/1.html')); 
+  res.sendFile(__dirname+'/myFiles/1.html'); 
 });
 
 userApp.get('/imges',(req,res)=>{

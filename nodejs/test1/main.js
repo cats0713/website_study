@@ -12,7 +12,7 @@ app.get('/cat1',(req,res)=>{
   res.render('img',{'tilte': 'cat1' , 'time':'2022-03-03', 'imgSrc' : 'cat3.png'});
 });
 app.get('/cat2',(req,res)=>{
-  res.render('img',{'tilte': 'cat2' , 'time':'2022-05-13', 'imgSrc' : 'cat4.jpg'});
+  res.render('img',{'tilte': 'cat2' , 'time':'2022-05-13', 'imgSrc' : 'cat4.jpg', 'text':'yu'});
 });
 app.listen(2000,()=>{
   console.log("2000 open");

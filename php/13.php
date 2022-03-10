@@ -10,4 +10,9 @@
   echo $gender.'<br>';
   echo $age.'<br>';
 
+  $file = fopen("./test.txt","r");
+  fget($file);
+
+  echo fpassthru($file);
+  fclose($file);
 ?>

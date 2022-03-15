@@ -7,7 +7,13 @@
 }
 body{
   text-align: center;
+
 }
+.site{
+  display: inline-block;
+  width: 100rem;
+}
+
 header{
   // background-color: red;
   display: inline-block;
@@ -73,7 +79,8 @@ header{
 }
 
 nav{
-  button{
+  ul{
+    display: inline-block;
     font-family: 'Italianno', cursive;
     font-size: 5rem;
     width: 10rem;

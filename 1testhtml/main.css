@@ -10,6 +10,11 @@ body {
   text-align: center;
 }
 
+.site {
+  display: inline-block;
+  width: 100rem;
+}
+
 header {
   display: inline-block;
   width: 100rem;
@@ -85,7 +90,8 @@ header a:active {
   color: black;
 }
 
-nav button {
+nav ul {
+  display: inline-block;
   font-family: 'Italianno', cursive;
   font-size: 5rem;
   width: 10rem;

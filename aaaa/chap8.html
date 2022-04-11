@@ -7,20 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="numberA">a</div>
   <script>
-    const Foo = class Person{
-      name;
-      constructor(name){
-        this.name = name;
-      }
-      sayHi(){
-          console.log(`Hi ${this.name}`);
-        }
+    Object.prototype.test = function(){
+      console.log(this);
     }
-
-    const me = new Foo('Lee');
-    me.sayHi();
+    let number = 273;
+    number.test();
   </script>
 </body>
 </html>

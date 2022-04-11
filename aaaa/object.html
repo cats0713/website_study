@@ -8,15 +8,14 @@
 </head>
 <body>
   <script>
-    const ob1 = {
-      a: 'sometring',
-      b: 42
-    };
+    const {prop1: p1 , prop2: p2} = {prop1: 'a' , prop2: 'b'};
 
-    for(const [k,v] of Object.entries(ob1)){
-      console.log(`${k} : ${v}`);
-
+    let add = (...a)=>{
+      let sum = a[0] + a[1];
+      return sum;
     }
+    console.log(add(p1,p2));
+
   </script>
 </body>
 </html>

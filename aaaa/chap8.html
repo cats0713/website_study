@@ -8,11 +8,17 @@
 </head>
 <body>
   <script>
-    Object.prototype.test = function(){
-      console.log(this);
-    }
-    let number = 273;
-    number.test();
+    let string = 'aaaaaa';
+
+    document.write(string.anchor()+'<br>');
+    document.write(string.big()+'<br>');
+    document.write(string.blink()+'<br>');
+    document.write(string.bold()+'<br>');
+    document.write(string.fixed()+'<br>');
+    document.write(string.fontcolor('red')+'<br>');
+    document.write(string.sup('red')+'<br>');
+
+
   </script>
 </body>
 </html>

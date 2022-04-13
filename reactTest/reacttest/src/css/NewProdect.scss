@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+.prodectBox{
+  display: flex;
+  flex-direction: row;
+}
+[class *= 'prodect']{
+  width: 30rem;
+  height: 30rem;
+  background-color: palevioletred;
+  text-align: center;
+  img{
+    width: 30rem;
+    height: 25rem;
+  }
+  h2{
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}

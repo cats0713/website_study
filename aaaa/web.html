@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>
+    symbol
+  </title>
 </head>
+
 <body>
   <script>
-    window.onload=()=>{
-      let img = document.createElement("img");
-      img.setAttribute("src", "./1.jpg");
+    // window.onload=()=>{
+    //   let img = document.createElement("img");
+    //   img.setAttribute("src", "./1.jpg");
 
-      document.body.appendChild(img);
-    }
+    //   document.body.appendChild(img);
+    let mySymbol = Symbol();
+    console.log(mySymbol);
+    console.log(typeof mySymbol);
+    // }
   </script>
 </body>
+
 </html>

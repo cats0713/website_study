@@ -17,10 +17,51 @@
     //   img.setAttribute("src", "./1.jpg");
 
     //   document.body.appendChild(img);
-    let mySymbol = Symbol();
-    console.log(mySymbol);
-    console.log(typeof mySymbol);
-    // }
+    // let mySymbol = Symbol();
+    // console.log(mySymbol);
+    // console.log(typeof mySymbol);
+
+    // let mms = Symbol('aaa');
+    // console.log(mms);
+    // console.log(mms == Symbol("aaa"));
+    // // }
+
+    // const obj = {};
+    // obj.prop = 'aaa';
+    // obj[123] = 123;
+    // obj['aaa'+123] = false;
+
+    // console.log(obj);
+
+    // const obj2 = {};
+
+    // const mySymbol2 = Symbol('mySymbol');
+    // obj2[mySymbol2] = 123;
+
+    // console.log(mySymbol2);
+    // console.log(obj2[mySymbol2]);
+    // console.log(obj2);
+
+    // const iter = ['a','b','c'];
+    // console.log(iter);
+    // const iterator1 = iter[Symbol.iterator]();
+    // console.log(iter);
+
+    const s1 = Symbol.for('foo');
+    const s2 = Symbol.for('foo');
+
+    console.log(s1==s2);
+
+    const shareSymbol = Symbol.for('myKey');
+    const key1 = Symbol.keyFor(shareSymbol);
+    console.log(Symbol.keyFor(shareSymbol));
+    console.log(key1);
+
+    const shareSymbol2 = Symbol('myKey');
+    const key2 = Symbol.keyFor(shareSymbol2);
+    console.log(Symbol.keyFor(shareSymbol2));
+
+
   </script>
 </body>
 

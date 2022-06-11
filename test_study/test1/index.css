@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  color: #333333;
+}
+body{
+  text-align: center;
+}
+
+a{
+  color: #333333;
+  text-decoration: none;
+  outline: none;
+}
+a:hover, a:active{
+  text-decoration: none;
+  color: #333333;
+}
+
+.mainBox{
+  display: inline-block;
+  width: 120rem;
+  height: 70rem;
+  /* background-color: red; */
+}
+
+/* 네비게이션 */
+.navBox{
+  display: block;
+  width: 100%;
+  height: 10rem;
+}
+.logoBox:hover{
+  cursor: pointer;
+}
+.logoBox{
+  float: left;
+  width: 15rem;
+  height: 10rem;
+  display: inline-block;
+  /* background-color: aqua; */
+  line-height: 10rem;
+  font-size: 2.5rem;
+}
+
+.navMenuBox>li{
+  display: inline-block;
+  width: 25%;
+  height: 6rem;
+  float: left;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 6rem;
+  position: relative;
+}
+.navMenuBox>li>a{
+  font-size: 2rem;
+}
+.lnb{
+  list-style: none;
+  display: none;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+}
+.lnb>li>a{
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 5rem;
+  width: 100%;
+  height: 25%;
+}
+.lnb>li>a:hover{
+  cursor: pointer;
+  background-color: lightblue;
+}
+.navMenuBox>li:hover{
+  cursor: pointer;
+  background-color: lightblue;
+}
+.navMenuBox{
+  display: inline-block;
+  float: right;
+  list-style: none;
+  /* background-color: white; */
+  width: 45rem;
+  height: 8rem;
+  padding-top: 2rem;
+  margin-right: 3rem;
+
+}
+
+/* 슬라이드 */
+.imageSilde{
+  width: 100%;
+  height: 30rem;
+  background-color: antiquewhite;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+
+#mainImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  
+}
+
+.img2, .img3{
+  display: none;
+}
+
+/* 게시판 */
+.textBox{
+  width: 100%;
+  height: 20rem;
+}
+
+.C1,.C2,.C3{
+  display: inline-block;
+  float: left;
+  width: 33.3%;
+  height: 100%;
+}
+.C1{
+}
+
+.notiBox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.notiBox>ul{
+  display: block;
+  list-style: none;
+  float: left;
+  margin-left: 1rem;
+}
+.notiBox>ul>li>a{
+  display: block;
+  font-size: 1.8rem;
+}
+.btnBox{
+  width: 100%;
+  height: 4rem;
+  margin-left: 1rem;
+}
+.btnBox>h3{
+  display: inline-block;
+  /* border: 0.1rem solid #333333; */
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 2.3rem;
+  float: left;
+}
+.btnBox>h3:hover{
+  cursor: pointer;
+  color: aquamarine;
+}
+.clicked{
+  color: aqua;
+}
+.noticeList{
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+}
+.potoList{
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  visibility:hidden;
+}
+.potoList>li{
+  float: left;
+}
+
+.C2>a>img{
+  width: 100%;
+  height: 100%;
+}
+
+.C3>{
+
+}
+/* 푸터 */
+.footer{
+  width: 100%;
+  height: 10rem;
+  background-color: blueviolet;
+}

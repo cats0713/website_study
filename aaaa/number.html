@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coco</title>
+</head>
+<body>
+  <script>
+    class sumNumber{
+      constructor(a){
+        this.a = a;
+      }
+
+      sumBer(){
+        let sum = 0;
+        this.a.forEach((e,i,a)=>{
+          sum += e;
+        });
+        return sum;
+      }
+    }
+    let number=(a)=>{
+      let sum = 0;
+      a.forEach((e,i,a)=>{
+        sum += e;
+      });
+      return sum;
+    }
+    let b = [1,2,3,4,5,5,6,7,7,9];
+    console.log(number(b));
+
+    let aa = new sumNumber(b);
+    console.log(aa.sumBer());
+  </script>
+</body>
+</html>
